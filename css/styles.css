@@ -1,6 +1,13 @@
+/* Para cuadrar todas las ventanas en el navegador */
+/* To align all windows in the browser */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -23,6 +30,23 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
+    .main-header-line-upper-log-text{
+        font:400 12px / 1 "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+    }
+
+
+
+
+
+
+
+
+
+
 
 }
 
