@@ -19,6 +19,7 @@
 
   }
 
+  /* FONT */
   .main-header-line-upper-log-text,
   .main-header-line-lower-content-box {
     font: 400 8.5px / 1 "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
@@ -30,11 +31,12 @@
   .main-header-line-upper {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 25px;
     width: 100%;
     justify-content: space-between;
     border-bottom: 3px solid #1a2eae;
-    min-height: 70px;
+    min-height: 55px;
+
   }
 
   /*BLOCK LEFT: LOG IN | SIGN UP */
@@ -44,6 +46,33 @@
     flex-grow: 0;
     justify-content: flex-start;
     width: 200px;
+  }
+
+  .main-header-line-upper-log-text a {
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+
+  .main-header-line-lower a {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 10px;
+    transition: 0.2s ease;
+  }
+
+  .main-header-line-lower a:hover,
+  .main-header-line-upper-log-text a:hover {
+    color: #F8D400;
+    transform: scale(1.06);
   }
 
   .main-header-line-upper-log-icon {
@@ -63,7 +92,7 @@
     font-weight: bold;
   }
 
- /* BLOCK CENTER: LOGO DC */
+  /* BLOCK CENTER: LOGO DC */
   .main-header-line-upper-logo {
     flex-grow: 1;
     display: flex;
@@ -81,7 +110,7 @@
     justify-content: flex-end;
     width: 200px;
     flex-grow: 0;
-    
+
   }
 
   .search-page {
@@ -97,8 +126,8 @@
   .search-page::placeholder {
     color: #8899AA;
   }
-  
-  .main-header-line-lower-content{
+
+  .main-header-line-lower-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
