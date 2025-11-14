@@ -222,6 +222,12 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     gap: 20px;
   }
 
+  #form-suggestion-new-character-or-comics form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   #form-suggestion-new-character-or-comics label {
     display: block;
     margin-bottom: 8px;
@@ -268,7 +274,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     transform: scale(1.05);
   }
 
-  #form-suggestion-nwe-character-or-comics input[type="text"]:focus,
+  #form-suggestion-new-character-or-comics input[type="text"],
   #form-suggestion-new-character-or-comics textarea:focus{
     border-color: var(--accent-red);
     box-shadow: 0 0 8px var(--accent-red), 0 0 16px var(--accent-red-dark);
