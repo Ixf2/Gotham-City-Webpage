@@ -40,6 +40,8 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     background-color: var(--dark-gray);
     color: var(--text-light);
   }
+  
+ 
 
   /* FONT */
   .main-header-line-upper-log-text,
@@ -136,10 +138,10 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     justify-content: flex-end;
     margin-right: 30%;
     flex-grow: 0;
-
+    gap: 10px;
   }
 
-  .search-page {
+  .search-page  {
     padding: 5px 10px;
     background-color: var(--medium-gray);
     color: var(--text-light);
@@ -147,11 +149,36 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     border-radius: 4px;
     width: 120px;
     font-size: 13px;
+    flex-grow: 1;
   }
 
   .search-page::placeholder {
     color: #8899AA;
   }
+
+  .search-page-submit{
+    padding: 6px 14px;
+    backdrop-filter: var(--accent-red);
+    color: var(--dark-bg);
+    border: 1px solid var(--accent-red-dark);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s ease;
+  }
+
+  .search-page-submit:hover{
+    background-color: var(--highlight);
+    border-color: var(--accent-red);
+    transform-origin: scale(1.05);
+    color: var(--text-light);
+  }
+
+  .search-page, .search-page-submit{
+    height: 32px;
+
+  }
+
 
   .main-header-line-lower-content {
     display: flex;
@@ -172,6 +199,8 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     padding: 10px 0;
   }
 
+  
+
   .main-header-line-upper-log-text a{
     font-size: 15px;
     letter-spacing: 2px;
@@ -179,9 +208,10 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   }
 
 
+
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {}
-
+    
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {}
