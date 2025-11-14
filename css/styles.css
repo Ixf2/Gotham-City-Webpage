@@ -11,11 +11,11 @@ REFERENCE: https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:ro
 Note: I see the code in the other webpages, I am a person curious, I search the anwser on how to use it.
 I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
-:root{
+:root {
   /*WALLPAPER*/
   --dark-bg: #0a0a0a;
   --dark-gray: #121212;
-   --medium-gray: #1c1c1c;
+  --medium-gray: #1c1c1c;
 
   /*COLOURS*/
   --accent-red: #b22222;
@@ -23,7 +23,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   --accent-orange: #d35400;
 
   /*TEXTS*/
-  --text-light: #e0e0e0; 
+  --text-light: #e0e0e0;
   --text-muted: #888888;
   --highlight: #f05555;
 }
@@ -40,10 +40,10 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     background-color: var(--dark-gray);
     color: var(--text-light);
   }
-  
- 
 
-  /* FONT */
+
+
+  /* FONT ALL*/
   .main-header-line-upper-log-text,
   .main-header-line-lower-content-box {
     font: 400 15px / 1 "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
@@ -51,7 +51,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     text-transform: uppercase;
   }
 
-  /*UPPER LINE*/
+  /*UPPER LINE CONTENT*/
   .main-header-line-upper {
     display: flex;
     align-items: center;
@@ -79,8 +79,9 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     cursor: pointer;
     transition: 0.2s ease;
   }
+
   .main-header-line-upper-log,
-  .main-header-line-upper-search{
+  .main-header-line-upper-search {
     width: auto;
   }
 
@@ -141,7 +142,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     gap: 10px;
   }
 
-  .search-page  {
+  .search-page {
     padding: 5px 10px;
     background-color: var(--medium-gray);
     color: var(--text-light);
@@ -156,7 +157,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     color: #8899AA;
   }
 
-  .search-page-submit{
+  .search-page-submit {
     padding: 6px 14px;
     backdrop-filter: var(--accent-red);
     color: var(--dark-bg);
@@ -167,19 +168,21 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     transition: 0.2s ease;
   }
 
-  .search-page-submit:hover{
+  .search-page-submit:hover {
     background-color: var(--highlight);
     border-color: var(--accent-red);
     transform-origin: scale(1.05);
     color: var(--text-light);
   }
 
-  .search-page, .search-page-submit{
+  .search-page,
+  .search-page-submit {
     height: 32px;
 
   }
 
 
+  /* LINE LOWER CONTENT*/
   .main-header-line-lower-content {
     display: flex;
     justify-content: space-around;
@@ -199,24 +202,86 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     padding: 10px 0;
   }
 
-  
 
-  .main-header-line-upper-log-text a{
+
+  .main-header-line-upper-log-text a {
     font-size: 15px;
     letter-spacing: 2px;
     padding: 0 25px;
   }
 
-#suggestion-text{
+  /*FORM*/
+  #form-suggestion-new-character-or-comics {
+    background-color: var(--medium-gray);
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    color: var(--text-light);
 
-  resize: none;
-}
+  }
+
+  #form-suggestion-new-character-or-comics label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--text-light);
+
+  }
+
+  #form-suggestion-new-character-or-comics input [type="text"],
+  #form-suggestion-new-character-or-comics textarea,
+  #form-suggestion-new-character-or-comics input [type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid var(--dark-gray);
+    border-radius: 10px;
+    background-color: var(--dark-gray);
+    color: var(--text-light);
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+
+  #suggestion-text {
+    height: 120px;
+    resize: none;
+  }
+
+  #form-suggestion-new-character-or-comics input[type="submit"] {
+    background-color: var(--accent-red);
+    border: none;
+    color: var(--text-light);
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+  }
+
+  #form-suggestion-new-character-or-comics input[type="submit"]:hover {
+    background-color: var(--accent-red-dark);
+    transform: scale(1.05);
+  }
+
+  #form-suggestion-new-character-or-comics input::placeholder,
+  #form-suggestion-new-character-or-comics textarea::placeholder {
+    color: var(--text-muted);
+
+  }
+
+  /*FOOTER*/
+
 
 
 
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {}
-    
+
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {}
