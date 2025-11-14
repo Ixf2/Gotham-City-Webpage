@@ -159,7 +159,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
   .search-page-submit {
     padding: 6px 14px;
-    backdrop-filter: var(--accent-red);
+    background-color: var(--accent-red);
     color: var(--dark-bg);
     border: 1px solid var(--accent-red-dark);
     border-radius: 4px;
@@ -171,7 +171,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   .search-page-submit:hover {
     background-color: var(--highlight);
     border-color: var(--accent-red);
-    transform-origin: scale(1.05);
+    transform: scale(1.05);
     color: var(--text-light);
   }
 
@@ -213,13 +213,13 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   /*FORM*/
   #form-suggestion-new-character-or-comics {
     background-color: var(--medium-gray);
-    padding: 40px 20px;
+    padding: 40px 30px;
     max-width: 600px;
     margin: 50px auto;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
     color: var(--text-light);
-
+    gap: 20px;
   }
 
   #form-suggestion-new-character-or-comics label {
@@ -231,9 +231,9 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
   }
 
-  #form-suggestion-new-character-or-comics input [type="text"],
+  #form-suggestion-new-character-or-comics input[type="text"],
   #form-suggestion-new-character-or-comics textarea,
-  #form-suggestion-new-character-or-comics input [type="text"] {
+  #form-suggestion-new-character-or-comics input[type="text"] {
     width: 100%;
     padding: 12px 15px;
     margin-bottom: 20px;
@@ -246,7 +246,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   }
 
   #suggestion-text {
-    height: 120px;
+    height: 120px;;
     resize: none;
   }
 
@@ -254,7 +254,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     background-color: var(--accent-red);
     border: none;
     color: var(--text-light);
-    padding: 12px 20px;
+    padding: 6px 10px;
     border-radius: 10px;
     font-size: 16px;
     font-weight: bold;
@@ -268,11 +268,19 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     transform: scale(1.05);
   }
 
+  #form-suggestion-nwe-character-or-comics input[type="text"]:focus,
+  #form-suggestion-new-character-or-comics textarea:focus{
+    border-color: var(--accent-red);
+    box-shadow: 0 0 8px var(--accent-red), 0 0 16px var(--accent-red-dark);
+    outline: none;
+  }
+
   #form-suggestion-new-character-or-comics input::placeholder,
   #form-suggestion-new-character-or-comics textarea::placeholder {
     color: var(--text-muted);
 
   }
+
 
   /*FOOTER*/
 
@@ -281,6 +289,10 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {}
+
+  #form-suggestion-new-character-or-comics {
+    padding: 30px 15px;
+  }
 
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
