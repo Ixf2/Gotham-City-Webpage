@@ -207,6 +207,11 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     padding: 0 25px;
   }
 
+#suggestion-text{
+
+  resize: none;
+}
+
 
 
   /* Large devices (laptops/desktops, 992px and up) */
