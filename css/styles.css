@@ -210,7 +210,29 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     padding: 0 25px;
   }
 
-  /*FORM*/
+   /*#########################################################################*/
+  /*################################ MAIN ################################*/
+  /*#########################################################################*/
+  .character-image-container{
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+  }
+
+  .character-image-container img {
+    width: 250px;      
+    height: 350px;    
+    object-fit: cover; 
+}
+
+
+
+
+
+  /*#########################################################################*/
+  /*################################ FORM ################################*/
+  /*#########################################################################*/
+
   #form-suggestion-new-character-or-comics {
     background-color: var(--medium-gray);
     padding: 40px 30px;
