@@ -210,20 +210,20 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     padding: 0 25px;
   }
 
-   /*#########################################################################*/
+  /*#########################################################################*/
   /*################################ MAIN ################################*/
   /*#########################################################################*/
-  .character-image-container{
+  .character-image-container {
     width: 250px;
     height: 350px;
     overflow: hidden;
   }
 
   .character-image-container img {
-    width: 250px;      
-    height: 350px;    
-    object-fit: cover; 
-}
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+  }
 
 
 
@@ -244,7 +244,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     gap: 20px;
   }
 
-  #form-suggestion-new-character-or-comics form{
+  #form-suggestion-new-character-or-comics form {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -274,7 +274,8 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   }
 
   #suggestion-text {
-    height: 120px;;
+    height: 120px;
+    ;
     resize: none;
   }
 
@@ -297,7 +298,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   }
 
   #form-suggestion-new-character-or-comics input[type="text"],
-  #form-suggestion-new-character-or-comics textarea:focus{
+  #form-suggestion-new-character-or-comics textarea:focus {
     border-color: var(--accent-red);
     box-shadow: 0 0 8px var(--accent-red), 0 0 16px var(--accent-red-dark);
     outline: none;
