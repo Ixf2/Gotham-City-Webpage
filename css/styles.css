@@ -202,15 +202,211 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     padding: 10px 0;
   }
 
-
-
   .main-header-line-upper-log-text a {
     font-size: 15px;
     letter-spacing: 2px;
     padding: 0 25px;
   }
 
-  /*FORM*/
+  /*-------------------------------------------------------------*/
+  /*------------------------ MAIN -------------------------------*/
+  /*-------------------------------------------------------------*/
+  #gotham-city{
+    height: 100vh;
+    background: url('img/wallpaper/gotham-city-map.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8b0000;
+  }
+
+  #heroes-villains-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #villains,
+  #suppers{
+    flex: 1;
+    overflow: auto;
+    background-color: var(--dark-bg);
+  }
+
+  #villains{
+    background-color: var(--dark-bg);
+  }
+  #villains .feature-characters-title{
+    color: var(--highlight);
+
+  }
+
+  #villains .character-card{
+    background-color: var(--dark-gray);
+    border: 2px solid var(--accent-red-dark);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+
+  #villains .character-card:hover{
+    transform: scale(1.03);
+    border-color: var(--accent-red);
+  }
+
+  #villains, #supers{
+    flex: 1;
+    overflow: auto;;
+    background-color: var(--dark-bg);
+  }
+
+  #supers{
+    background-color: var(--dark-bg);
+    padding: 50px 0;
+  }
+
+  #supers .feature-characters-title{
+    color: var(--text-light);
+  }
+
+  #supers .character-card{
+    background-color: var(--medium-gray);
+    border: 2px solid var(--accent-orange);
+    border-radius: 10px;
+    transition: 0.3s ease;
+  }
+   #supers .character-card:hover{
+    transform: scale(1.03);
+    border-color: var(--highlight);
+   }
+ 
+  #comics{
+    height: 100vh;
+    overflow: auto;
+    background-color: var(--medium-gray);
+    padding: 50px 0;
+  }
+
+  #comics .feature-characters-title{
+    color: var(--text-light);
+  }
+
+  #comics .character-card{
+    background-color: var(--dark-gray);
+    border: 2px solid var(--accent-red);
+    border-radius: 10px;
+    transition: 0.3s ease;
+  }
+
+  #comics .character-card:hover{
+    transform: scale(1.03);
+    border-color: var(--highlight);
+  }
+
+
+  .character-card{
+    background-color: var(--dark-gray);
+    color: var(--text-light);
+    border-radius: 10px;
+    border: 2px solid var(--medium-gray);
+    padding: 10px;
+    transition: 0.3s ease;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+  }
+
+  .character-info-box{
+    margin-top: auto;
+    padding: 15px 10px;
+  }
+
+
+  .character-card h2{
+    color: var(--text-light);
+  }
+
+  .character-name-secondary{
+    color: var(--text-muted);
+  }
+
+  .character-card:hover{
+    transform: scale(1.03);
+    border-color: var(--highlight);
+  }
+
+
+  .character-image-container {
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+  }
+
+  .character-image-container img {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .content-images-main-character-grid-villain{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .content-images-main-villain{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+
+  
+
+  .content-images-main-villain .feature-characters-title{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: var(--highlight);
+    text-transform: uppercase;
+  }
+
+  .content-images-main-super{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+  
+  .content-images-main-super .feature-characters-title{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+  }
+
+  .content-images-main-character-grid-supper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+
+  /*-------------------------------------------------------------*/
+  /*----------------------------- FORM --------------------------*/
+  /*-------------------------------------------------------------*/
+
   #form-suggestion-new-character-or-comics {
     background-color: var(--medium-gray);
     padding: 40px 30px;
@@ -219,6 +415,12 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
     color: var(--text-light);
+    gap: 20px;
+  }
+
+  #form-suggestion-new-character-or-comics form {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
   }
 
@@ -246,7 +448,8 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   }
 
   #suggestion-text {
-    height: 120px;;
+    height: 120px;
+    ;
     resize: none;
   }
 
@@ -268,8 +471,8 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     transform: scale(1.05);
   }
 
-  #form-suggestion-nwe-character-or-comics input[type="text"]:focus,
-  #form-suggestion-new-character-or-comics textarea:focus{
+  #form-suggestion-new-character-or-comics input[type="text"],
+  #form-suggestion-new-character-or-comics textarea:focus {
     border-color: var(--accent-red);
     box-shadow: 0 0 8px var(--accent-red), 0 0 16px var(--accent-red-dark);
     outline: none;
