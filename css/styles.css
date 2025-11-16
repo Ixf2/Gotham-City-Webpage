@@ -431,13 +431,31 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 /* COMMITS */
 .commit-img img {
-    max-width: 150px;
-    max-height: 150px;
-    border-radius: 5px;
-    object-fit: cover;
-    margin-top: 10px;
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-top: 10px;
 }
 
+#commit-and-form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+}
+
+.commit-card {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+#form-suggestion-new-character-or-comics {
+  flex: 1;
+  max-width: 600px;
+}
 
 /* FROM */
 #form-suggestion-new-character-or-comics {
@@ -533,6 +551,12 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     height: 320px;
   }
 
+  .commit-and-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
 
 }
 
@@ -542,6 +566,19 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   .character-card {
     max-width: 160px;
     height: 260px;
+  }
+
+  #commit-and-form {
+    flex-direction: column !important;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+
+
+  .commit-card,
+  #form-suggestion-new-character-or-comics {
+    width: 100%;
   }
 
 }
