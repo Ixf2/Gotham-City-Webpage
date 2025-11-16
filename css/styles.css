@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
 }
 
 /*ROOT SECTOR VARIABLE COLORS 
@@ -55,13 +56,11 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   .main-header-line-upper {
     display: flex;
     align-items: center;
-    padding: 5px 80px;
-    min-width: unset;
-    width: 100%;
     justify-content: space-between;
+    width: 100%;
     border-bottom: 3px solid var(--accent-red);
-    min-height: 55px;
     font-size: 0.8rem;
+    
   }
 
   /*BLOCK LEFT: LOG IN | SIGN UP */
@@ -70,7 +69,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     align-items: center;
     flex-grow: 0;
     justify-content: flex-start;
-    margin-left: 30%;
+    margin-left: 25%;
   }
 
   .main-header-line-upper-log-text a {
@@ -79,11 +78,6 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     border: none;
     cursor: pointer;
     transition: 0.2s ease;
-  }
-
-  .main-header-line-upper-log,
-  .main-header-line-upper-search {
-    width: auto;
   }
 
 
@@ -129,7 +123,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 0;
+    
   }
 
 
@@ -212,7 +206,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   /*-------------------------------------------------------------*/
   /*------------------------ MAIN -------------------------------*/
   /*-------------------------------------------------------------*/
-  #gotham-city{
+  #gotham-city {
     height: 100vh;
     background: url('img/wallpaper/gotham-city-map.jpg') no-repeat center center;
     background-size: cover;
@@ -222,28 +216,32 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     background-color: #8b0000;
   }
 
-  #heroes-villains-container{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
 
   #villains,
-  #suppers{
+  #suppers,
+  #comics {
     flex: 1;
     overflow: auto;
     background-color: var(--dark-bg);
   }
 
-  #villains{
+  #villains,
+  #supers,
+  #comics {
     background-color: var(--dark-bg);
+    overflow: hidden;
   }
-  #villains .feature-characters-title{
+
+  #villains .feature-characters-title,
+  #supers .feature-characters-title,
+  #comics .feature-characters-title {
     color: var(--highlight);
 
   }
 
-  #villains .character-card{
+  #villains .character-card,
+  #super .character-card,
+  #comics .character-card {
     background-color: var(--dark-gray);
     border: 2px solid var(--accent-red-dark);
     border-radius: 10px;
@@ -251,62 +249,114 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     transition: 0.3s ease;
   }
 
-  #villains .character-card:hover{
+  #villains .character-card:hover,
+  #supers .character-card:hover,
+  #comics .character-card:hover {
     transform: scale(1.03);
     border-color: var(--accent-red);
+    z-index: 10;
   }
 
-  #villains, #supers{
+  .content-images-main-character-grid-villain,
+  .content-images-main-character-grid-super,
+  .content-images-main-character-grid-comics{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+  }
+
+  .character-card{
+    flex: 1 1 250px;
+    max-width: 250px;
+    height: 350px;
+    background-color: var(--medium-gray);
+    border: 2px solid var(--accent-red);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+  }
+
+  /* #villains,
+  #supers,
+  #comics {
     flex: 1;
-    overflow: auto;;
-    background-color: var(--dark-bg);
-  }
+    /* overflow: auto; */
+    /* background-color: var(--dark-bg);
+    padding-bottom: 3rem;
+  } */
 
-  #supers{
+  /* 
+  #supers, #comics{
     background-color: var(--dark-bg);
     padding: 50px 0;
   }
 
   #supers .feature-characters-title{
     color: var(--text-light);
+    padding: 3rem;
   }
 
   #supers .character-card{
     background-color: var(--medium-gray);
-    border: 2px solid var(--accent-orange);
+    border: 2px solid var(--accent-red);
     border-radius: 10px;
     transition: 0.3s ease;
   }
-   #supers .character-card:hover{
+   
+
+   #supers .character-card:hover, #villains .character-card:hover{
     transform: scale(1.03);
     border-color: var(--highlight);
-   }
- 
-  #comics{
+   } */
+
+  /* #comics{
+    flex: 1;
     height: 100vh;
-    overflow: auto;
-    background-color: var(--medium-gray);
+    overflow: hidden;
+    background-color: var(--dark-bg);
     padding: 50px 0;
+  }
+  .content-images-main-character-flex-comics{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    overflow: visible;
+    height: 100%;
+    box-sizing: border-box;
   }
 
   #comics .feature-characters-title{
     color: var(--text-light);
   }
 
-  #comics .character-card{
-    background-color: var(--dark-gray);
+  .comics .character-card{
+    width: 250px;
+    height: 350px;
+    background-color: var(--medium-gray);
     border: 2px solid var(--accent-red);
     border-radius: 10px;
-    transition: 0.3s ease;
+    transition: transform 0.3s ease;
+    overflow: hidden;
   }
 
-  #comics .character-card:hover{
+  .comics .character-card:hover{
     transform: scale(1.03);
     border-color: var(--highlight);
-  }
+  } */
 
+  /*   
 
-  .character-card{
+  /* .character-card{
     background-color: var(--dark-gray);
     color: var(--text-light);
     border-radius: 10px;
@@ -318,23 +368,23 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     flex-direction: column;
     height: 100%;
     padding: 0;
-  }
+  } */
 
-  .character-info-box{
+  .character-info-box {
     margin-top: auto;
     padding: 15px 10px;
   }
 
 
-  .character-card h2{
+  .character-card h2 {
     color: var(--text-light);
   }
 
-  .character-name-secondary{
+  .character-name-secondary {
     color: var(--text-muted);
   }
 
-  .character-card:hover{
+  .character-card:hover {
     transform: scale(1.03);
     border-color: var(--highlight);
   }
@@ -352,7 +402,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     object-fit: cover;
   }
 
-  .content-images-main-character-grid-villain{
+  .content-images-main-character-grid-villain {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -363,15 +413,15 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     padding: 0 20px;
   }
 
-  .content-images-main-villain{
+  .content-images-main-villain {
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 20px;
   }
 
-  
 
-  .content-images-main-villain .feature-characters-title{
+
+  .content-images-main-villain .feature-characters-title {
     text-align: center;
     margin-bottom: 30px;
     font-size: 2.5rem;
@@ -379,13 +429,13 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     text-transform: uppercase;
   }
 
-  .content-images-main-super{
+  .content-images-main-super {
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 20px;
   }
-  
-  .content-images-main-super .feature-characters-title{
+
+  .content-images-main-super .feature-characters-title {
     text-align: center;
     margin-bottom: 30px;
     font-size: 2.5rem;
@@ -393,7 +443,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     text-transform: uppercase;
   }
 
-  .content-images-main-character-grid-supper{
+  .content-images-main-character-grid-super {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -403,7 +453,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     padding: 0 20px;
   }
 
-
+  */
   /*-------------------------------------------------------------*/
   /*----------------------------- FORM --------------------------*/
   /*-------------------------------------------------------------*/
@@ -492,10 +542,11 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 
   /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {}
+  @media only screen and (min-width: 992px) {
 
   #form-suggestion-new-character-or-comics {
     padding: 30px 15px;
+  }
   }
 
 
