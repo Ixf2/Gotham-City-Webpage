@@ -429,6 +429,17 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 /*----------------------------- FORM --------------------------*/
 /*-------------------------------------------------------------*/
 
+/* COMMITS */
+.commit-img img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+
+/* FROM */
 #form-suggestion-new-character-or-comics {
   background-color: var(--medium-gray);
   padding: 40px 30px;
@@ -505,6 +516,9 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   color: var(--text-muted);
 
 }
+
+
+
 
 
 /*FOOTER*/
