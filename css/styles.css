@@ -30,582 +30,504 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 }
 
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Extra large devices (large laptops and desktops, 1200px and up)
+@media only screen and (min-width: 1200px) { */
 
-  #main-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--dark-gray);
-    color: var(--text-light);
+#main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-gray);
+  color: var(--text-light);
+}
+
+
+
+/* FONT ALL*/
+.main-header-line-upper-log-text,
+.main-header-line-lower-content-box {
+  font: 400 15px / 1 "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/*UPPER LINE CONTENT*/
+.main-header-line-upper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 3px solid var(--accent-red);
+  font-size: 0.8rem;
+
+}
+
+/*BLOCK LEFT: LOG IN | SIGN UP */
+.main-header-line-upper-log {
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
+  justify-content: flex-start;
+  margin-left: 25%;
+}
+
+.main-header-line-upper-log-text a {
+  color: var(--text-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+
+.main-header-line-lower a {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  transition: 0.2s ease;
+}
+
+.main-header-line-lower a:hover,
+.main-header-line-upper-log-text a:hover {
+  color: var(--highlight);
+  transform: scale(1.06);
+}
+
+.main-header-line-upper-log-icon {
+  margin-right: 5px;
+
+}
+
+.main-header-line-upper-log-text {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+.main-header-line-upper-log-text-separator {
+  margin: 0 15px;
+  opacity: 1;
+  font-weight: bold;
+}
+
+/* BLOCK CENTER: LOGO DC */
+.main-header-line-upper-logo {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+
+/*BLOCK RIGTH: SEARCH*/
+.main-header-line-upper-search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 30%;
+  flex-grow: 0;
+  gap: 10px;
+}
+
+.search-page {
+  padding: 5px 10px;
+  background-color: var(--medium-gray);
+  color: var(--text-light);
+  border: 1px solid var(--medium-gray);
+  border-radius: 4px;
+  width: 120px;
+  font-size: 13px;
+  flex-grow: 1;
+}
+
+.search-page::placeholder {
+  color: #8899AA;
+}
+
+.search-page-submit {
+  padding: 6px 14px;
+  background-color: var(--accent-red);
+  color: var(--dark-bg);
+  border: 1px solid var(--accent-red-dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.search-page-submit:hover {
+  background-color: var(--highlight);
+  border-color: var(--accent-red);
+  transform: scale(1.05);
+  color: var(--text-light);
+}
+
+.search-page,
+.search-page-submit {
+  height: 32px;
+
+}
+
+
+/* LINE LOWER CONTENT*/
+.main-header-line-lower-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-header-line-lower {
+  width: 100%;
+  background-color: var(--dark-gray);
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.main-header-line-upper-log-text a {
+  font-size: 15px;
+  letter-spacing: 2px;
+  padding: 0 25px;
+}
+
+/*-------------------------------------------------------------*/
+/*------------------------ MAIN -------------------------------*/
+/*-------------------------------------------------------------*/
+
+#gotham-city {
+  height: 100vh;
+  background: url('img/wallpaper/gotham-city-map.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8b0000;
+}
+
+.container-rigth-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.text-gotham {
+  order: 1;
+
+}
+
+.image-gotham {
+  order: 2;
+}
+
+.image-gotham img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-gotham h2 {
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+}
+
+.text-gotham p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* CARDS VILLAINS, SUPER AND COMICS */
+
+
+#villains,
+#supers,
+#comics {
+  flex: 1;
+  overflow: auto;
+  background-color: var(--dark-bg);
+  padding: 50px 0;
+}
+
+#villains,
+#supers,
+#comics {
+  background-color: var(--dark-bg);
+  overflow: hidden;
+}
+
+#villains .feature-characters-title,
+#supers .feature-characters-title,
+#comics .feature-characters-title {
+  color: var(--highlight);
+
+}
+
+#comics .character-card {
+  background-color: var(--dark-gray);
+  border: 2px solid var(--accent-red-dark);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+#villains .character-card:hover,
+#supers .character-card:hover,
+#comics .character-card:hover {
+  transform: scale(1.03);
+  border-color: var(--accent-red);
+  z-index: 10;
+}
+
+.content-images-main-character-grid-villain,
+.content-images-main-character-grid-super,
+.content-images-main-character-grid-comics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+}
+
+.character-card {
+  flex: 1 1 250px;
+  max-width: 250px;
+  height: 350px;
+  background-color: var(--dark-bg);
+  border: 2px solid var(--accent-red);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+}
+
+#supers .character-card,
+#villains .character-card {
+  background-color: var(--dark-bg);
+  border: 2px solid var(--accent-red);
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+
+#supers .character-card:hover,
+#villains .character-card:hover {
+  transform: scale(1.03);
+  border-color: var(--highlight);
+}
+
+#comics,
+#villains,
+#supers {
+  flex: 1;
+  height: auto;
+  overflow: visible;
+  background-color: var(--dark-bg);
+  padding: 50px 0;
+}
+
+
+.content-images-main-character-flex-villain,
+.content-images-main-character-flex-super {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  overflow: visible;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.content-images-main-character-flex-comics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  overflow: visible;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#comics h2,
+#villains h2,
+#supers h2 {
+  color: var(--text-light);
+  padding-bottom: 2rem;
+}
+
+
+.character-card {
+  background-color: var(--dark-gray);
+  color: var(--text-light);
+  border-radius: 10px;
+  border: 2px solid var(--medium-gray);
+  padding: 10px;
+  transition: 0.3s ease;
+  width: 250px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 0;
+}
+
+.character-info-box {
+  margin-top: auto;
+  padding: 15px 10px;
+}
+
+
+.character-card h2 {
+  color: var(--text-light);
+}
+
+.character-name-secondary {
+  color: var(--text-muted);
+}
+
+.character-card:hover {
+  transform: scale(1.03);
+  border-color: var(--highlight);
+}
+
+
+.character-image-container {
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
+}
+
+.character-image-container img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+}
+
+
+
+
+/*-------------------------------------------------------------*/
+/*----------------------------- FORM --------------------------*/
+/*-------------------------------------------------------------*/
+
+#form-suggestion-new-character-or-comics {
+  background-color: var(--medium-gray);
+  padding: 40px 30px;
+  max-width: 600px;
+  margin: 50px auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  color: var(--text-light);
+  gap: 20px;
+}
+
+#form-suggestion-new-character-or-comics form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#form-suggestion-new-character-or-comics label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--text-light);
+
+}
+
+#form-suggestion-new-character-or-comics input[type="text"],
+#form-suggestion-new-character-or-comics textarea,
+#form-suggestion-new-character-or-comics input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 2px solid var(--dark-gray);
+  border-radius: 10px;
+  background-color: var(--dark-gray);
+  color: var(--text-light);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+#suggestion-text {
+  height: 120px;
+  ;
+  resize: none;
+}
+
+#form-suggestion-new-character-or-comics input[type="submit"] {
+  background-color: var(--accent-red);
+  border: none;
+  color: var(--text-light);
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+#form-suggestion-new-character-or-comics input[type="submit"]:hover {
+  background-color: var(--accent-red-dark);
+  transform: scale(1.05);
+}
+
+#form-suggestion-new-character-or-comics input[type="text"],
+#form-suggestion-new-character-or-comics textarea:focus {
+  border-color: var(--accent-red);
+  box-shadow: 0 0 8px var(--accent-red), 0 0 16px var(--accent-red-dark);
+  outline: none;
+}
+
+#form-suggestion-new-character-or-comics input::placeholder,
+#form-suggestion-new-character-or-comics textarea::placeholder {
+  color: var(--text-muted);
+
+}
+
+
+/*FOOTER*/
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .character-card {
+    width: 220px;
+    height: 320px;
   }
 
 
+}
 
-  /* FONT ALL*/
-  .main-header-line-upper-log-text,
-  .main-header-line-lower-content-box {
-    font: 400 15px / 1 "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .character-card {
+    max-width: 160px;
+    height: 260px;
   }
-
-  /*UPPER LINE CONTENT*/
-  .main-header-line-upper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    border-bottom: 3px solid var(--accent-red);
-    font-size: 0.8rem;
-    
-  }
-
-  /*BLOCK LEFT: LOG IN | SIGN UP */
-  .main-header-line-upper-log {
-    display: flex;
-    align-items: center;
-    flex-grow: 0;
-    justify-content: flex-start;
-    margin-left: 25%;
-  }
-
-  .main-header-line-upper-log-text a {
-    color: var(--text-light);
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s ease;
-  }
-
-
-  .main-header-line-lower a {
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--text-light);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px 10px;
-    transition: 0.2s ease;
-  }
-
-  .main-header-line-lower a:hover,
-  .main-header-line-upper-log-text a:hover {
-    color: var(--highlight);
-    transform: scale(1.06);
-  }
-
-  .main-header-line-upper-log-icon {
-    margin-right: 5px;
-
-  }
-
-  .main-header-line-upper-log-text {
-    display: flex;
-    align-items: center;
-    margin-left: 0;
-  }
-
-  .main-header-line-upper-log-text-separator {
-    margin: 0 15px;
-    opacity: 1;
-    font-weight: bold;
-  }
-
-  /* BLOCK CENTER: LOGO DC */
-  .main-header-line-upper-logo {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
-
-
-  /*BLOCK RIGTH: SEARCH*/
-  .main-header-line-upper-search {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-right: 30%;
-    flex-grow: 0;
-    gap: 10px;
-  }
-
-  .search-page {
-    padding: 5px 10px;
-    background-color: var(--medium-gray);
-    color: var(--text-light);
-    border: 1px solid var(--medium-gray);
-    border-radius: 4px;
-    width: 120px;
-    font-size: 13px;
-    flex-grow: 1;
-  }
-
-  .search-page::placeholder {
-    color: #8899AA;
-  }
-
-  .search-page-submit {
-    padding: 6px 14px;
-    background-color: var(--accent-red);
-    color: var(--dark-bg);
-    border: 1px solid var(--accent-red-dark);
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 13px;
-    transition: 0.2s ease;
-  }
-
-  .search-page-submit:hover {
-    background-color: var(--highlight);
-    border-color: var(--accent-red);
-    transform: scale(1.05);
-    color: var(--text-light);
-  }
-
-  .search-page,
-  .search-page-submit {
-    height: 32px;
-
-  }
-
-
-  /* LINE LOWER CONTENT*/
-  .main-header-line-lower-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  .main-header-line-lower {
-    width: 100%;
-    background-color: var(--dark-gray);
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0;
-  }
-
-  .main-header-line-upper-log-text a {
-    font-size: 15px;
-    letter-spacing: 2px;
-    padding: 0 25px;
-  }
-
-  /*-------------------------------------------------------------*/
-  /*------------------------ MAIN -------------------------------*/
-  /*-------------------------------------------------------------*/
-  
-  #gotham-city {
-    height: 100vh;
-    background: url('img/wallpaper/gotham-city-map.jpg') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #8b0000;
-  }
-
-  .container-rigth-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .text-gotham{
-    order: 1;
-
-  }
-
-  .image-gotham{
-    order: 2;
-  }
-
-  .image-gotham img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .text-gotham h2{
-    margin: 0 0 10px 0;
-    font-size: 2rem;
-  }
-
-  .text-gotham p{
-    margin: 0;
-    font-size: 1rem;
-    opacity: 0.8;
-  }
-
-  /* CARDS VILLAINS, SUPER AND COMICS */
-
-  
-  #villains,
-  #supers,
-  #comics {
-    flex: 1;
-    overflow: auto;
-    background-color: var(--dark-bg);
-    padding: 50px 0;
-  }
-
-  #villains,
-  #supers,
-  #comics {
-    background-color: var(--dark-bg);
-    overflow: hidden;
-  }
-
-  #villains .feature-characters-title,
-  #supers .feature-characters-title,
-  #comics .feature-characters-title {
-    color: var(--highlight);
-
-  }
-
-  #villains .character-card,
-  #comics .character-card {
-    background-color: var(--dark-gray);
-    border: 2px solid var(--accent-red-dark);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: 0.3s ease;
-  }
-
-  #villains .character-card:hover,
-  #supers .character-card:hover,
-  #comics .character-card:hover {
-    transform: scale(1.03);
-    border-color: var(--accent-red);
-    z-index: 10;
-  }
-
-  .content-images-main-character-grid-villain,
-  .content-images-main-character-grid-super,
-  .content-images-main-character-grid-comics{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 100vw;
-    margin: 0 auto;
-    padding: 0 10px;
-    box-sizing: border-box;
-
-  }
-
-  .character-card{
-    flex: 1 1 250px;
-    max-width: 250px;
-    height: 350px;
-    background-color: var(--medium-gray);
-    border: 2px solid var(--accent-red);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-
-  }
-
-   #supers .character-card{
-    background-color: var(--medium-gray);
-    border: 2px solid var(--accent-red);
-    border-radius: 10px;
-    transition: 0.3s ease;
-  }
-   
-
-   #supers .character-card:hover, #villains .character-card:hover{
-    transform: scale(1.03);
-    border-color: var(--highlight);
-   } 
-
-   #comics, #villains, #supers{
-    flex: 1;
-    height: 100vh;
-    overflow: hidden;
-    background-color: var(--dark-bg);
-    padding: 50px 0;
-    margin-bottom: 4rem;
-  }
-
-
-  .content-images-main-character-flex-villain, 
-  .content-images-main-character-flex-super{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100%;
-    gap: 1rem;
-    overflow: visible;
-    box-sizing: border-box;
-  }
-
-  .content-images-main-character-flex-comics{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px;
-    overflow: visible;
-    height: 100%;
-    box-sizing: border-box;
-  }
-
-  #comics h2, #villains h2, #supers h2{
-    color: var(--text-light);
-    padding-bottom: 2rem;
-  }
-
-  /* .comics .character-card{
-    width: 250px;
-    height: 350px;
-    background-color: var(--medium-gray);
-    border: 2px solid var(--accent-red);
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    overflow: hidden;
-  } */
-
-  /* .comics .character-card:hover{
-    transform: scale(1.03);
-    border-color: var(--highlight);
-  }  */
-
-    
-
-   .character-card{
-    background-color: var(--dark-gray);
-    color: var(--text-light);
-    border-radius: 10px;
-    border: 2px solid var(--medium-gray);
-    padding: 10px;
-    transition: 0.3s ease;
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 0;
-  } 
-
-  .character-info-box {
-    margin-top: auto;
-    padding: 15px 10px;
-  }
-
-
-  .character-card h2 {
-    color: var(--text-light);
-  }
-
-  .character-name-secondary {
-    color: var(--text-muted);
-  }
-
-  .character-card:hover {
-    transform: scale(1.03);
-    border-color: var(--highlight);
-  }
-
-
-  .character-image-container {
-    width: 250px;
-    height: 350px;
-    overflow: hidden;
-  }
-
-  .character-image-container img {
-    width: 250px;
-    height: 350px;
-    object-fit: cover;
-  }
-
-  /* .content-images-main-character-grid-villain {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  .content-images-main-villain {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 20px;
-  } */
-
-/* 
-
-  .content-images-main-villain .feature-characters-title {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-    color: var(--highlight);
-    text-transform: uppercase;
-  }
-
-  .content-images-main-super {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 20px;
-  } */
-
-  /* .content-images-main-super .feature-characters-title {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-    color: var(--text-light);
-    text-transform: uppercase;
-  } */
-
-  /* .content-images-main-character-grid-super {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  } */
-
-
-  /*-------------------------------------------------------------*/
-  /*----------------------------- FORM --------------------------*/
-  /*-------------------------------------------------------------*/
-
-  #form-suggestion-new-character-or-comics {
-    background-color: var(--medium-gray);
-    padding: 40px 30px;
-    max-width: 600px;
-    margin: 50px auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-    color: var(--text-light);
-    gap: 20px;
-  }
-
-  #form-suggestion-new-character-or-comics form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  #form-suggestion-new-character-or-comics label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    font-size: 14px;
-    color: var(--text-light);
-
-  }
-
-  #form-suggestion-new-character-or-comics input[type="text"],
-  #form-suggestion-new-character-or-comics textarea,
-  #form-suggestion-new-character-or-comics input[type="text"] {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    border: 2px solid var(--dark-gray);
-    border-radius: 10px;
-    background-color: var(--dark-gray);
-    color: var(--text-light);
-    font-size: 14px;
-    transition: all 0.3s ease;
-  }
-
-  #suggestion-text {
-    height: 120px;
-    ;
-    resize: none;
-  }
-
-  #form-suggestion-new-character-or-comics input[type="submit"] {
-    background-color: var(--accent-red);
-    border: none;
-    color: var(--text-light);
-    padding: 6px 10px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-
-  }
-
-  #form-suggestion-new-character-or-comics input[type="submit"]:hover {
-    background-color: var(--accent-red-dark);
-    transform: scale(1.05);
-  }
-
-  #form-suggestion-new-character-or-comics input[type="text"],
-  #form-suggestion-new-character-or-comics textarea:focus {
-    border-color: var(--accent-red);
-    box-shadow: 0 0 8px var(--accent-red), 0 0 16px var(--accent-red-dark);
-    outline: none;
-  }
-
-  #form-suggestion-new-character-or-comics input::placeholder,
-  #form-suggestion-new-character-or-comics textarea::placeholder {
-    color: var(--text-muted);
-
-  }
-
-
-  /*FOOTER*/
-
-
-
-
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-
-  #form-suggestion-new-character-or-comics {
-    padding: 30px 15px;
-  }
-  }
-
-
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 600px) {}
-
-
-  /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
