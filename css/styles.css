@@ -428,6 +428,36 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 /*-------------------------------------------------------------*/
 /*----------------------------- FORM --------------------------*/
 /*-------------------------------------------------------------*/
+#commit-and-form-container{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+
+}
+/* EXPERIMENT BG */
+#wallpaper-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#wallpaper-bg video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(120%) brightness(50%);
+}
+
+
+
+
 
 /* COMMITS */
 .commit-img img {
@@ -438,8 +468,20 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   margin-top: 10px;
 }
 
+#update-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  border: 2px solid var(--accent-red-dark);
+  border-radius: 2px;
+} 
+
 #commit-and-form {
   display: flex;
+  position: relative;
+  z-index: 1;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
@@ -570,7 +612,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
   #commit-and-form {
     flex-direction: column !important;
-    align-items: stretch;
+    align-items: center;
     gap: 15px;
   }
 

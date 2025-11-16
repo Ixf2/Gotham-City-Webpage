@@ -393,60 +393,71 @@
 
 
 
+				<div id="commit-and-form-container">
+					<!--   FORM OR SUGGESTION    -->
+					<div id="wallpaper-bg">
+						<!-- EXPERIMENT BACKGROUND -->
+						<video autoplay muted loop id="form-bg-video">
+							<source src="videos/experiment-video-bg.mp4" type="video/mp4">
+						</video>
+					</div>
+					<div id="commit-and-form">
+						<section id="update-form">
+							<h2>Commits</h2>
+							<div class="commit-card">
+								<div class="commit-header">
+									<p class="commit-name">First Name and Surname:</p>
+									<p class="commit-name">Email:</p>
+								</div>
+								<div class="commit-body">
+									<p class="commit-text">Suggestion:</p>
+								</div>
+								<div class="commit-img">
 
-				<!--   FORM OR SUGGESTION    -->
-				<div id="commit-and-form">
-					<section id="update-form">
-						<h2>Commits</h2>
-						<div class="commit-card">
-							<div class="commit-header">
-								<p class="commit-name">First Name and Surname:</p>
-								<p class="commit-name">Email:</p>
-							</div>
-							<div class="commit-body">
-								<p class="commit-text">Suggestion:</p>
-							</div>
-							<div class="commit-img">
-
-							</div>
-						</div>
-						
-
-					</section>
-					<section id="form-suggestion-new-character-or-comics">
-						<h2>Suggest a New Character or Comics</h2>
-
-						<form method="post" enctype="multipart/form-data">
-							<div class="input-group">
-								<label for="name-and-surname">Name and surname</label>
-								<input id="name-and-surname" type="text" name="name-and-surname"
-									placeholder="Firs name and surname">
+								</div>
 							</div>
 
-							<div class="input-group">
-								<label for="Email">Email</label>
-								<input id="Email" type="text" name="Email" placeholder="example@email.com">
-							</div>
 
-							<div class="input-group">
-								<label for="suggestion-text">Suggestion</label>
-								<textarea id="suggestion-text" name="suggestion-text"
-									placeholder="Write the suggestion or comic you need to see on the page."
-									rows="4"></textarea>
-							</div>
+							<!-- FROM -->
+						</section>
+						<section id="form-suggestion-new-character-or-comics">
 
-							<div class="input-group">
-								<label for="img-suggestion">Image to suggestion</label>
-								<input id="img-suggestion" type="file" name="img-suggestion" accept="image/*">
-							</div>
 
-							<div class="input-group">
-								<input id="submit-send" type="submit" value="Send">
-							</div>
-						</form>
-					</section>
+
+
+							<h2>Suggest a New Character or Comics</h2>
+
+							<form method="post" enctype="multipart/form-data">
+								<div class="input-group">
+									<label for="name-and-surname">Name and surname</label>
+									<input id="name-and-surname" type="text" name="name-and-surname"
+										placeholder="Firs name and surname">
+								</div>
+
+								<div class="input-group">
+									<label for="Email">Email</label>
+									<input id="Email" type="text" name="Email" placeholder="example@email.com">
+								</div>
+
+								<div class="input-group">
+									<label for="suggestion-text">Suggestion</label>
+									<textarea id="suggestion-text" name="suggestion-text"
+										placeholder="Write the suggestion or comic you need to see on the page."
+										rows="4"></textarea>
+								</div>
+
+								<div class="input-group">
+									<label for="img-suggestion">Image to suggestion</label>
+									<input id="img-suggestion" type="file" name="img-suggestion" accept="image/*">
+								</div>
+
+								<div class="input-group">
+									<input id="submit-send" type="submit" value="Send">
+								</div>
+							</form>
+						</section>
+					</div>
 				</div>
-
 			</div>
 		</div>
 
