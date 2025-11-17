@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Referencia para hacer el contenido de la página https://www.nasa.gov/nasa-missions-->
 <!-- Referencia para hacer el contenido de la página https://dribbble.com/shots/24297211-Bento-Cards-v2-AI-->
 <!-- Reference for creating the page content: https://www.marvel.com/characters -->
 <!-- Reference for creating the page content: https://dribbble.com/shots/24297211-Bento-Cards-v2-AI- -->
@@ -14,6 +13,7 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="shortcut icon" href="img/icons/icon-favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="stylesheet" href="https://fontawesome.com">
 </head>
 
 <body>
@@ -53,31 +53,51 @@
 
 			<!--LOWER MENU-->
 			<div class="main-header-line-lower">
+				<!-- MENU ICON -->
+					<span class="menu-icon" onclick="toggleMenu()">
+						<i class="fa-solid fa-bars"></i>
+					</span>
+
+					<!-- NAV MENU MOBILE -->
+					<div class="menu-links">
+						<a href="#gotham-city">GOTHAM CITY</a>
+						<a href="#content-images-main-villain">CHARACTERS</a>
+						<a href="#comics">COMICS</a>
+						<a href="#commit-and-form-container">SUGERENCIAS</a>
+					</div>
+
+
 				<div class="main-header-line-lower-content">
 					<div class="main-header-line-lower-content-box">
-						<a class="text-content-header" href="main-header">GOTHAM CITY</a>
+						<a class="text-content-header" href="#gotham-city">GOTHAM CITY</a>
 					</div>
 					<div class="main-header-line-lower-content-box">
-						<a class="text-content-header" href="main-header">CHARACTERS</a>
+						<a class="text-content-header" href="#content-images-main-villain">CHARACTERS</a>
 					</div>
 					<div class="main-header-line-lower-content-box">
-						<a class="text-content-header" href="main-header">COMICS</a>
+						<a class="text-content-header" href="#comics">COMICS</a>
 					</div>
 					<div class="main-header-line-lower-content-box">
-						<a class="text-content-header" href="main-header">SUGERENCIAS</a>
+						<a class="text-content-header" href="#commit-and-form-container">SUGGESTIONS</a>
 					</div>
+
+					
 				</div>
 			</div>
 		</div>
 	</header>
 
+					
+
 
 	<main>
-	
+
 		<!--   PARALLAX    -->
-		
-		
-		
+		<div id="parallax-container">
+
+		</div>
+
+
 
 
 		<!--   BLOCK GOTHAM CITY    -->
@@ -94,7 +114,22 @@
 						<div class="text-gotham">
 							<div>
 								<h2>Gotham City Map</h2>
-								<p>Description</p>
+								<p>Gotham City is a place where light constantly struggles against darkness.
+									Founded as a thriving urban center, it gradually became a hotbed of corruption and
+									crime,
+									ruled by both corrupt politicians and street violence. Its gothic skyscrapers and
+									shadowy alleys
+									reflect the city’s duality: wealth and decay, power and despair.
+								</p>
+								<p>
+									It is home to heroes and villains alike: Batman patrols its rooftops, facing
+									criminals like the Joker,
+									the Penguin, and Two-Face, while the city struggles to hold on to hope. Every corner
+									of Gotham
+									tells stories of mystery, intrigue, and tragedy, making it more than just a
+									setting—it is a
+									living character within the Batman universe.
+								</p>
 							</div>
 						</div>
 					</div>
@@ -104,14 +139,14 @@
 
 
 
-			
+
 			<!--  CARD MAIN   -->
-		
+
 			<div id="main-box-background">
 
-			
+
 				<!--CARDS VILLAIN-->
-	
+
 				<section id="villains">
 					<div id="content-images-main-villain">
 						<h2 class="features-characters-title">FEATURED CHARACTERS VILLAIN</h2>
@@ -186,9 +221,9 @@
 					</div>
 				</section>
 
-			
+
 				<!--CARDS SUPERS-->
-				
+
 				<section id="supers">
 					<div id="content-images-main-super">
 						<h2 class="features-characters-title">FEATURED CHARACTERS SUPER</h2>
@@ -207,7 +242,8 @@
 							<!-- 2. CARD BARBARA GORDON-->
 							<div class="character-card">
 								<div class="character-image-container">
-									<img src="img/heroes/barbara-gordon-absolute-universe.jpg" alt="barbara-gordon-image">
+									<img src="img/heroes/barbara-gordon-absolute-universe.jpg"
+										alt="barbara-gordon-image">
 								</div>
 								<div class="character-info-box">
 									<h3>Barbara Gordon</h3>
@@ -218,7 +254,8 @@
 							<!-- 3. CARD ELEANORE THAWNE-->
 							<div class="character-card">
 								<div class="character-image-container">
-									<img src="img/heroes/eleanore-thawne-absolute-universe.jpg" alt="eleanore-thawne-image">
+									<img src="img/heroes/eleanore-thawne-absolute-universe.jpg"
+										alt="eleanore-thawne-image">
 								</div>
 								<div class="character-info-box">
 									<h3>Eleanore Thawne</h3>
@@ -264,12 +301,12 @@
 				</section>
 
 
-				
+
 				<!--CARDS COMICS-->
-				
+
 				<section id="comics">
 					<div id="content-images-main-comics">
-						<h2 class="features-characters-title">FEATURED CHARACTERS COMICS</h2>
+						<h2 class="features-characters-title">FEATURED COMICS</h2>
 						<article class="content-images-main-character-flex-comics">
 
 							<!-- 1. ABSOLUTE UNIVERSE VOL. 1.1 -->
@@ -391,39 +428,73 @@
 
 
 
-				
-				<!--   FORM OR SUGGESTION    -->
-			
-				<section id="form-suggestion-new-character-or-comics">
-					<h2>Suggest a New Character or Comics</h2>
+				<div id="commit-and-form-container">
+					<!--   FORM OR SUGGESTION    -->
+					<div id="wallpaper-bg">
+						<!-- EXPERIMENT BACKGROUND -->
+						<video autoplay muted loop id="form-bg-video">
+							<source src="videos/experiment-video-bg.mp4" type="video/mp4">
+						</video>
+					</div>
 
-					<form method="post" enctype="multipart/form-data">
-						<div class="input-group">
-							<label for="name-and-surname">Name and surname</label>
-							<input id="name-and-surname" type="text" name="name-and-surname" placeholder="Firs name and surname">
-						</div>
+					<!-- COMMITS AND FORM -->
+					<div id="commit-and-form">
+						<section id="update-form">
+							<h2>Commits</h2>
+							<div class="commit-card">
+								<div class="commit-header">
+									<p class="commit-name">First Name and Surname:</p>
+									<p class="commit-name">Email:</p>
+								</div>
+								<div class="commit-body">
+									<p class="commit-text">Suggestion:</p>
+								</div>
+								<div class="commit-img">
 
-						<div class="input-group">
-							<label for="email-form">Email</label>
-							<input id="Email" type="text" name="Email" placeholder="example@email.com">
-						</div>
+								</div>
+							</div>
 
-						<div class="input-group">
-							<label for="suggestion-text">Suggestion</label>
-							<textarea id="suggestion-text" name="suggestion-text"
-								placeholder="Write the suggestion or comic you need to see on the page." rows="4"></textarea>
-						</div>
 
-						<div class="input-group">
-							<label for="img-suggestion">Image to suggestion</label>
-							<input id="img-suggestion" type="file" name="img-suggestion" accept="image/*">
-						</div>
+							<!-- FROM -->
+						</section>
+						<section id="form-suggestion-new-character-or-comics">
 
-						<div class="input-group">
-							<input id="submit-send" type="submit" value="Send">
-						</div>
-					</form>
-				</section>
+
+
+
+							<h2>Suggest a New Character or Comics</h2>
+
+							<form method="post" enctype="multipart/form-data">
+								<div class="input-group">
+									<label for="name-and-surname">Name and surname</label>
+									<input id="name-and-surname" type="text" name="name-and-surname"
+										placeholder="Firs name and surname">
+								</div>
+
+								<div class="input-group">
+									<label for="Email">Email</label>
+									<input id="Email" type="text" name="Email" placeholder="example@email.com">
+								</div>
+
+								<div class="input-group">
+									<label for="suggestion-text">Suggestion</label>
+									<textarea id="suggestion-text" name="suggestion-text"
+										placeholder="Write the suggestion or comic you need to see on the page."
+										rows="4"></textarea>
+								</div>
+
+								<div class="input-group">
+									<label for="img-suggestion">Image to suggestion</label>
+									<input id="img-suggestion" type="file" name="img-suggestion" accept="image/*">
+								</div>
+
+								<div class="input-group">
+									<input id="submit-send" type="submit" value="Send">
+								</div>
+							</form>
+						</section>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -432,9 +503,9 @@
 
 
 	<footer>
-		
+
 		<!-- FOOTER -->
-		
+
 		<div id="footer-container">
 			<div class="footer-container nav-menu">
 				<div id="footer-container-left">
@@ -459,14 +530,16 @@
 				</div>
 				<div id="footer-container-rigth">
 					<div class="footer-container-rigth-red-socials">
-						<a class="red-social-1" href="https://www.youtube.com/dc" target="_blank" rel="noopener noreferrer">
+						<a class="red-social-1" href="https://www.youtube.com/dc" target="_blank"
+							rel="noopener noreferrer">
 							<i class="fa-brands fa-youtube"></i>
 						</a>
-						<a class="red-social-2" href="https://x.com/DCOfficial?lang=es" target="_blank" rel="noopener noreferrer">
+						<a class="red-social-2" href="https://x.com/DCOfficial?lang=es" target="_blank"
+							rel="noopener noreferrer">
 							<i class="fa-brands fa-square-x-twitter"></i>
 						</a>
-						<a class="red-social-3" href="https://www.facebook.com/DCUnitedKingdom/?locale=es_ES" target="_blank"
-							rel="noopener noreferrer">
+						<a class="red-social-3" href="https://www.facebook.com/DCUnitedKingdom/?locale=es_ES"
+							target="_blank" rel="noopener noreferrer">
 							<i class="fa-brands fa-square-facebook"></i>
 						</a>
 					</div>
@@ -476,6 +549,7 @@
 	</footer>
 
 	<script src="js/gotham-form.js"></script>
+	<script src="js/gotham-menu.js"></script>
 </body>
 
 </html>
