@@ -637,16 +637,18 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 .footer-container {
   display: flex;
   flex-direction: row;
+  width: 100%;
   justify-content: space-around;
+  align-items: center;
   background-color: var(--dark-bg);
 }
 
-#footer-container-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+#footer-container-left,
+.footer-container-center,
+.footer-container-rigth {
+  flex: 1;
 }
+
 
 
 
