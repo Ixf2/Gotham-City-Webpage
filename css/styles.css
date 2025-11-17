@@ -53,18 +53,19 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 /* MENU ICON */
-.menu-icon{
+.menu-icon {
   display: none;
   cursor: pointer;
 }
 
-.menu-icon i{
+.menu-icon i {
   font-size: 28px;
   color: var(--text-light);
 }
 
-.menu-links{
+.menu-links {
   display: none;
   position: absolute;
   top: 60px;
@@ -85,7 +86,6 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   width: 100%;
   border-bottom: 3px solid var(--accent-red);
   font-size: 0.8rem;
-
 }
 
 /*BLOCK LEFT: LOG IN | SIGN UP */
@@ -243,7 +243,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   background-color: #8b0000;
   position: relative;
   z-index: 0;
-  
+
 }
 
 .container-rigth-image {
@@ -261,8 +261,9 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   border-radius: 10px;
   color: var(--highlight);
 }
-.text-gotham div{
-  background-color: rgba(20,20,20,0.7);
+
+.text-gotham div {
+  background-color: rgba(20, 20, 20, 0.7);
   padding: 20px;
   border-radius: 10px;
   max-width: 600px;
@@ -470,7 +471,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 /*-------------------------------------------------------------*/
 /*----------------------------- FORM --------------------------*/
 /*-------------------------------------------------------------*/
-#commit-and-form-container{
+#commit-and-form-container {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -480,8 +481,9 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   gap: 40px;
 
 }
+
 /* EXPERIMENT BG */
-#form-bg-video{
+#form-bg-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -494,7 +496,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 }
 
 
-#wallpaper-bg{
+#wallpaper-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -503,10 +505,6 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   z-index: -1;
   overflow: hidden;
 }
-
-
-
-
 
 
 
@@ -519,7 +517,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   margin-top: 10px;
 }
 
-#update-form{
+#update-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -530,7 +528,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   color: var(--text-light);
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
-} 
+}
 
 #commit-and-form {
   display: flex;
@@ -636,12 +634,24 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 
 /*FOOTER*/
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: var(--dark-bg);
+}
 
+#footer-container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
   .character-card {
     width: 220px;
     height: 320px;
@@ -659,21 +669,50 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .main-header-line-upper{
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
 
-  .menu-icon{
-    display: block;
-    margin-left: 0;
   }
-  .main-header-line-lower{
-    display: flex;
+  .main-header-line-upper-log{
+    margin-left: 0;
     justify-content: flex-start;
-    align-items: center;
-    gap: 20px
-    ;
+  }
+
+  .main-header-line-upper-logo{
+    padding-right: 60px;
+    
   }
 
   
-  .menu-links{
+
+
+  .main-header-line-upper-search {
+    display: none;
+  }
+
+  .main-header-line-lower-content a {
+    display: none;
+  }
+
+
+
+  .menu-icon {
+    display: block;
+    margin-left: 0;
+
+  }
+
+  .main-header-line-lower {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+  }
+
+
+  .menu-links {
     display: none;
     flex-direction: column;
     background-color: var(--medium-gray);
@@ -685,14 +724,15 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     z-index: 10001;
     padding: 0;
     overflow: visible;
-    
+
   }
-  .main-header-line-lower{
+
+  .main-header-line-lower {
     position: relative;
     z-index: 10000;
   }
 
-  .menu-links a{
+  .menu-links a {
     display: block;
     padding: 10px;
     color: var(--text-light);
@@ -700,11 +740,11 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     border-top: 1 solid var(--medium-gray);
   }
 
-  .menu-links a:hover{
-    background-color: var(--text-muted) ;
+  .menu-links a:hover {
+    background-color: var(--text-muted);
   }
 
-  .menu-links.show{
+  .menu-links.show {
     display: flex;
   }
 
@@ -719,19 +759,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     gap: 15px;
   }
 
-.main-header-line-upper-log,
-.main-header-line-upper-logo{
-  display: flex;
-  flex-direction: row-reverse;
-}
 
-
- .main-header-line-upper-search{
-  display: none;
- }
- .main-header-line-lower-content a{
-  display: none;
- }
 
   .commit-card,
   #form-suggestion-new-character-or-comics {
