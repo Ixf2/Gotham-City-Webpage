@@ -7,6 +7,14 @@
   box-sizing: border-box;
 }
 
+html, body{
+  height: 100%;
+  width: 100%;
+  background-color: var(--dark-bg);
+  display: flex;
+  flex-direction: column;
+}
+
 /*ROOT SECTOR VARIABLE COLORS 
 REFERENCE: https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:root
 Note: I see the code in the other webpages, I am a person curious, I search the anwser on how to use it.
@@ -636,20 +644,73 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 /*FOOTER*/
 .footer-container {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  justify-content: space-between;
   align-items: center;
+  gap: 40px;
+  border-radius: 12px;
   background-color: var(--dark-bg);
 }
 
+/* COLUMNS */
 #footer-container-left,
 .footer-container-center,
 .footer-container-rigth {
-  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
+/* LEFT LOGO */
+.footer-container-left-logo img{
+  height: 65px;
+}
 
+/* FOOTER CENTER */
+#footer-container-center{
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* NAV MENU */
+.nav-menu-container-center ul{
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-menu-container-center ul li a{
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-light);
+  font-size: 16px;
+}
+
+/* LOGO CENTER */
+.image-second-footer img{
+  height: 65px;
+}
+
+/* RIGTH RED SOCIAL */
+.footer-container-rigth-red-socials{
+  display: flex;
+  gap: 20px;
+}
+
+.footer-container-rigth-red-socials a{
+  font-size: 28px;
+  color: var(--text-light);
+  transition: 0.2s ease-in-out;
+
+}
+
+.footer-container-rigth-red-socials a:hover{
+  transform: scale(1.15);
+  color: var(--accent-red);
+}
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
