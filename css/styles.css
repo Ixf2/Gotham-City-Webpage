@@ -7,14 +7,6 @@
   box-sizing: border-box;
 }
 
-html, body{
-  height: 100%;
-  width: 100%;
-  background-color: var(--dark-bg);
-  display: flex;
-  flex-direction: column;
-}
-
 /*ROOT SECTOR VARIABLE COLORS 
 REFERENCE: https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:root
 Note: I see the code in the other webpages, I am a person curious, I search the anwser on how to use it.
@@ -307,16 +299,9 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 #supers,
 #comics {
   flex: 1;
-  overflow: auto;
+  overflow: visible;
   background-color: var(--dark-bg);
   padding: 50px 0;
-}
-
-#villains,
-#supers,
-#comics {
-  background-color: var(--dark-bg);
-  overflow: hidden;
 }
 
 #villains .feature-characters-title,
@@ -642,6 +627,19 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 
 /*FOOTER*/
+#footer-container{
+  width: 100%;
+  background-color: var(--dark-bg);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+  position: relative;
+}
+
 .footer-container {
   display: flex;
   max-width: 1200px;
@@ -650,8 +648,6 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  border-radius: 12px;
-  background-color: var(--dark-bg);
 }
 
 /* COLUMNS */
@@ -660,24 +656,26 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 .footer-container-rigth {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 
 /* LEFT LOGO */
-.footer-container-left-logo img{
-  height: 65px;
+#footer-video{
+  height: 100px;
+  width: auto;
 }
 
 /* FOOTER CENTER */
 #footer-container-center{
   flex-direction: row;
-  justify-content: center;
+  align-items: center;
   gap: 40px;
 }
 
 /* NAV MENU */
 .nav-menu-container-center ul{
   display: flex;
+  justify-content: center;
   list-style: none;
   gap: 25px;
 }
@@ -686,22 +684,29 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   text-decoration: none;
   font-weight: 600;
   color: var(--text-light);
-  font-size: 16px;
+  font-size: 20px;
+}
+
+.nav-menu-container-center ul:hover li:hover a:hover{
+  color: var(--accent-red);
+  transition: 0.2s ease-in-out;
 }
 
 /* LOGO CENTER */
-.image-second-footer img{
-  height: 65px;
+.footer-container-center-image-second-footer img{
+  width: auto;
+  margin-bottom: 10px;
 }
 
 /* RIGTH RED SOCIAL */
 .footer-container-rigth-red-socials{
   display: flex;
   gap: 20px;
+ 
 }
 
 .footer-container-rigth-red-socials a{
-  font-size: 28px;
+  font-size: 40px;
   color: var(--text-light);
   transition: 0.2s ease-in-out;
 
@@ -715,6 +720,23 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media (min-width: 601px) and (max-width: 900px) {
+  .gotham-map-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .gotham-text,
+  .gotham-image{
+    width: 100%;
+  }
+
+  .gotham-image img{
+    width: 100%;
+    height: auto;
+  }
+
   .character-card {
     width: 220px;
     height: 320px;
