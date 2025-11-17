@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Referencia para hacer el contenido de la página https://www.nasa.gov/nasa-missions-->
 <!-- Referencia para hacer el contenido de la página https://dribbble.com/shots/24297211-Bento-Cards-v2-AI-->
 <!-- Reference for creating the page content: https://www.marvel.com/characters -->
 <!-- Reference for creating the page content: https://dribbble.com/shots/24297211-Bento-Cards-v2-AI- -->
@@ -14,6 +13,7 @@
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="shortcut icon" href="img/icons/icon-favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="stylesheet" href="https://fontawesome.com">
 </head>
 
 <body>
@@ -53,6 +53,20 @@
 
 			<!--LOWER MENU-->
 			<div class="main-header-line-lower">
+				<!-- MENU ICON -->
+					<span class="menu-icon" onclick="toggleMenu()">
+						<i class="fa-solid fa-bars"></i>
+					</span>
+
+					<!-- NAV MENU MOBILE -->
+					<div class="menu-links">
+						<a href="#gotham-city">GOTHAM CITY</a>
+						<a href="#content-images-main-villain">CHARACTERS</a>
+						<a href="#comics">COMICS</a>
+						<a href="#commit-and-form-container">SUGERENCIAS</a>
+					</div>
+
+
 				<div class="main-header-line-lower-content">
 					<div class="main-header-line-lower-content-box">
 						<a class="text-content-header" href="#gotham-city">GOTHAM CITY</a>
@@ -64,18 +78,24 @@
 						<a class="text-content-header" href="#comics">COMICS</a>
 					</div>
 					<div class="main-header-line-lower-content-box">
-						<a class="text-content-header" href="#commit-and-form-container">SUGERENCIAS</a>
+						<a class="text-content-header" href="#commit-and-form-container">SUGGESTIONS</a>
 					</div>
+
+					
 				</div>
 			</div>
 		</div>
 	</header>
 
+					
+
 
 	<main>
 
 		<!--   PARALLAX    -->
+		<div id="parallax-container">
 
+		</div>
 
 
 
@@ -85,7 +105,7 @@
 			<section id="gotham-city">
 				<div class="container-gotham-city">
 					<div class="container-left-text">
-						
+
 					</div>
 					<div class="container-rigth-image">
 						<div class="image-gotham">
@@ -94,16 +114,21 @@
 						<div class="text-gotham">
 							<div>
 								<h2>Gotham City Map</h2>
-								<p>Gotham City is a place where light constantly struggles against darkness. 
-            Founded as a thriving urban center, it gradually became a hotbed of corruption and crime, 
-            ruled by both corrupt politicians and street violence. Its gothic skyscrapers and shadowy alleys 
-            reflect the city’s duality: wealth and decay, power and despair.
+								<p>Gotham City is a place where light constantly struggles against darkness.
+									Founded as a thriving urban center, it gradually became a hotbed of corruption and
+									crime,
+									ruled by both corrupt politicians and street violence. Its gothic skyscrapers and
+									shadowy alleys
+									reflect the city’s duality: wealth and decay, power and despair.
 								</p>
 								<p>
-									It is home to heroes and villains alike: Batman patrols its rooftops, facing criminals like the Joker, 
-            the Penguin, and Two-Face, while the city struggles to hold on to hope. Every corner of Gotham 
-            tells stories of mystery, intrigue, and tragedy, making it more than just a setting—it is a 
-            living character within the Batman universe.
+									It is home to heroes and villains alike: Batman patrols its rooftops, facing
+									criminals like the Joker,
+									the Penguin, and Two-Face, while the city struggles to hold on to hope. Every corner
+									of Gotham
+									tells stories of mystery, intrigue, and tragedy, making it more than just a
+									setting—it is a
+									living character within the Batman universe.
 								</p>
 							</div>
 						</div>
@@ -524,6 +549,7 @@
 	</footer>
 
 	<script src="js/gotham-form.js"></script>
+	<script src="js/gotham-menu.js"></script>
 </body>
 
 </html>
