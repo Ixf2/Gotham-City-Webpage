@@ -467,7 +467,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 #commit-and-form-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -627,9 +627,9 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 
 /*FOOTER*/
-#footer-container{
+#footer-container {
   width: 100%;
-  background-color: var(--dark-bg);
+  background-color: #0a0a0a;
   padding: 20px 0;
   display: flex;
   flex-direction: column;
@@ -640,7 +640,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   position: relative;
 }
 
-.footer-container {
+.footer-container-nav-menu {
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
@@ -660,59 +660,59 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 }
 
 /* LEFT LOGO */
-#footer-video{
+#footer-video {
   height: 100px;
   width: auto;
 }
 
 /* FOOTER CENTER */
-#footer-container-center{
+#footer-container-center {
   flex-direction: row;
   align-items: center;
   gap: 40px;
 }
 
 /* NAV MENU */
-.nav-menu-container-center ul{
+.nav-menu-container-center ul {
   display: flex;
   justify-content: center;
   list-style: none;
   gap: 25px;
 }
 
-.nav-menu-container-center ul li a{
+.nav-menu-container-center ul li a {
   text-decoration: none;
   font-weight: 600;
   color: var(--text-light);
   font-size: 20px;
 }
 
-.nav-menu-container-center ul:hover li:hover a:hover{
+.nav-menu-container-center ul:hover li:hover a:hover {
   color: var(--accent-red);
   transition: 0.2s ease-in-out;
 }
 
 /* LOGO CENTER */
-.footer-container-center-image-second-footer img{
+.footer-container-center-image-second-footer img {
   width: auto;
   margin-bottom: 10px;
 }
 
 /* RIGTH RED SOCIAL */
-.footer-container-rigth-red-socials{
+.footer-container-rigth-red-socials {
   display: flex;
   gap: 20px;
- 
+
 }
 
-.footer-container-rigth-red-socials a{
+.footer-container-rigth-red-socials a {
   font-size: 40px;
   color: var(--text-light);
   transition: 0.2s ease-in-out;
 
 }
 
-.footer-container-rigth-red-socials a:hover{
+.footer-container-rigth-red-socials a:hover {
   transform: scale(1.15);
   color: var(--accent-red);
 }
@@ -721,36 +721,40 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media (min-width: 601px) and (max-width: 900px) {
   #gotham-city {
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #8b0000;
-  position: relative;
-  z-index: 0;
+    height: auto;
+    padding: 40px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-}
-.container-rigth-image
-.text-gotham
-.image-gotham{
+  .container-rigth-image{
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
   }
-  
-  .gotham-text,
-  .gotham-image{
+
+
+
+  .text-gotham,
+  .image-gotham {
     width: 100%;
   }
 
-  .gotham-image img{
+  .gotham-text,
+  .gotham-image {
+    width: 100%;
+  }
+
+  .gotham-image img {
     width: 100%;
     height: auto;
+    object-fit: contain;
   }
 
   .character-card {
@@ -758,35 +762,80 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     height: 320px;
   }
 
+    /* FORM TABLET */
+#commit-and-form-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
   .commit-and-form {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 15px;
   }
 
+  #footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    position: relative;
+  }
 
+  #commit-and-form {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+  }
 }
+
 
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .main-header-line-upper{
+
+
+  #commit-and-form {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .main-header-line-upper {
     width: 100%;
     padding: 0 10px;
     box-sizing: border-box;
 
   }
-  .main-header-line-upper-log{
+
+  .main-header-line-upper-log {
     margin-left: 0;
     justify-content: flex-start;
   }
 
-  .main-header-line-upper-logo{
+  .main-header-line-upper-logo {
     padding-right: 60px;
-    
+
   }
 
-  
+
 
 
   .main-header-line-upper-search {
@@ -861,12 +910,13 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   }
 
 
- .container-rigth-image {
+  .container-rigth-image {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
   }
+
   .text-gotham {
     order: 1;
     width: 90%;
@@ -891,7 +941,8 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     overflow-wrap: break-word;
     padding: 15px;
   }
-   #gotham-city {
+
+  #gotham-city {
     padding: 20px 0;
     height: auto;
   }
