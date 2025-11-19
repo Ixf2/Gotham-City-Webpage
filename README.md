@@ -46,7 +46,7 @@ To run this project on your local environment, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [Your Repository URL]
+    git clone https://github.com/Ixf2/Gotham-City-Webpage
     cd gotham-city-universe-absolute
     ```
 2.  **Open the file:**
@@ -69,3 +69,4 @@ The design and concept were inspired by the following references (mentioned in t
 
 ---
 **Note:** This is a static **front-end** project. The suggestions form requires server-side logic (back-end) or the use of an external service to actually process and store the submitted data.
+
