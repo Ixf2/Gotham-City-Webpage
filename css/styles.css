@@ -42,6 +42,9 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   color: var(--text-light);
   position: relative;
   z-index: 100;
+
+  padding-top: 100px;
+  align-items: flex-start
 }
 
 
@@ -233,7 +236,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 /*-------------------------------------------------------------*/
 
 #gotham-city {
-  height: 100vh;
+  height: auto;
   background: url(../img/wallpaper/bg-gotham.jpg);
   background-size: cover;
   background-position: center;
@@ -466,7 +469,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 #commit-and-form-container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;

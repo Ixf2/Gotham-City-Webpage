@@ -1,3 +1,10 @@
+//Reference: https://developer.mozilla.org/es/docs/Web/JavaScript/Guide
+//Reference: https://www.w3schools.com/js/js_htmldom.asp
+//Reference: https://javascript.info
+//Reference: https://stackoverflow.com/questions/4976344/what-is-dom-summary-and-importance
+//Reference: video to the class for LocalStorage, and valitation.
+
+
 // ==========================================================
 // BLOCK CODE 1
 // ==========================================================
