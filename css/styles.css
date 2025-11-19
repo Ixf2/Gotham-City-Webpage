@@ -84,6 +84,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: auto;
   border-bottom: 3px solid var(--accent-red);
   font-size: 0.8rem;
 }
@@ -301,7 +302,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   flex: 1;
   overflow: visible;
   background-color: var(--dark-bg);
-  padding: 50px 0;
+  padding: 50px 2px;
 }
 
 #villains .feature-characters-title,
@@ -622,6 +623,10 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 }
 
+#section-form{
+  display: flex;
+  gap: 20px;
+}
 
 
 
@@ -657,6 +662,11 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   display: flex;
   align-items: center;
   gap: 40px;
+}
+
+
+.footer-container-center-image-second-footer-two{
+  display: none;
 }
 
 /* LEFT LOGO */
@@ -702,7 +712,6 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 .footer-container-rigth-red-socials{
   display: flex;
   gap: 20px;
- 
 }
 
 .footer-container-rigth-red-socials a{
@@ -719,8 +728,33 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media (min-width: 601px) and (max-width: 900px) {
-  .gotham-map-container{
+@media (min-width: 601px) and (max-width: 1200px) {
+  #section-form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-header-line-upper{
+    width: 100%;
+    height: auto;
+
+  }
+.container-rigth-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.main-header-line-upper-search{
+  display: none;
+  }
+  .gotham-container{
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -742,11 +776,84 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     height: 320px;
   }
 
-  .commit-and-form {
+  #commit-and-form {
     flex-direction: column;
     align-items: stretch;
     gap: 15px;
   }
+
+  #form-suggestion-new-character-or-comics{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+
+  /* FOOTER - TABLET */
+  #footer-container{
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .footer-container{
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-container-center-image-second-footer-two{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .footer-container-center-image-second-footer-two img{
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    display: block;
+  
+  }
+  .footer-container-center-image-second-footer{
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #footer-container-left,
+  .footer-container-center,
+  .footer-container-rigth{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* GIF FOOTER */
+  #footer-video{
+    display: none;
+  }
+
+  .nav-menu-container-center ul{
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .footer-container-rigth-red-socials a{
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+    font-size: 32px;
+
+  }
+
+
 
 
 }
@@ -781,6 +888,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     display: none;
   }
 
+  
 
 
   .menu-icon {
@@ -796,6 +904,31 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
   }
 
+  .container-rigth-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+
+
+
+
+  #form-suggestion-new-character-or-comics{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 25px;
+    transition: all 0.3s ease;
+  }
 
   .menu-links {
     display: none;
@@ -813,16 +946,20 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   }
 
   .main-header-line-lower {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     position: relative;
     z-index: 10000;
   }
+
 
   .menu-links a {
     display: block;
     padding: 10px;
     color: var(--text-light);
     text-decoration: none;
-    border-top: 1 solid var(--medium-gray);
+    border-top: 1px solid var(--medium-gray);
   }
 
   .menu-links a:hover {
@@ -839,16 +976,84 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   }
 
   #commit-and-form {
-    flex-direction: column !important;
+    flex-direction: column;
     align-items: center;
     gap: 15px;
   }
 
 
+  #gotham-city{
+    min-height: 100vh;
+    
+  }
+
+  .image-gotham img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 
   .commit-card,
   #form-suggestion-new-character-or-comics {
     width: 100%;
   }
+
+  
+  /* FOOTER - MOBILE */
+  #footer-container{
+    height: auto;
+    padding: 0 0;
+  }
+
+
+
+  .footer-container{
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-container-center-image-second-footer-two{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .footer-container-center-image-second-footer{
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-container-center-image-second-footer img{
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  #footer-container-left,
+  .footer-container-center,
+  .footer-container-rigth{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* GIF FOOTER */
+  #footer-video{
+    display: none;
+  }
+
+  .nav-menu-container-center ul{
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-container-rigth-red-socials a{
+    font-size: 25px;
+  }
+
+
 
 }
