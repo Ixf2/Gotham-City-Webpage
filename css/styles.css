@@ -70,15 +70,11 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   position: absolute;
   width: 100%;
   height: 100%;
-  inset: 0;
+  top: 0;
+  left: 0;
 }
 
-.parallax-layer img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-}
+
 
 /* BG WALLPAPER */
 .layer-bg{
@@ -95,31 +91,38 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   pointer-events: none;
 }
 
+.layer-bg,
+.layer-rain{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* BATSIGNAL */
 .layer-batsignal{
   width: auto;
   height: auto;
-  left: 30px;
-  top:20%;
+  position: absolute;
+  left: 40px;
+  top:10%;
   z-index: 2;
 }
 
-.layer-batsignal img{
+.layer-batsignal img,
+.layer-batman img{
   width: 250px;
   height: auto;
 }
 
 .layer-batman {
-  width: auto;
-  height: auto;
-  left: -30vw;
+ position: absolute;
+  right: 40px;
   bottom: 0;
   z-index: 3;
-  transition: transform 0.1s linear;
 }
 
 .layer-batman img {
-  height: 90vh;
+  height: 85vh;
   width: auto;
   pointer-events: none;
 }
