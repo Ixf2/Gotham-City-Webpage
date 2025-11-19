@@ -302,7 +302,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   flex: 1;
   overflow: visible;
   background-color: var(--dark-bg);
-  padding: 50px 0;
+  padding: 50px 2px;
 }
 
 #villains .feature-characters-title,
@@ -664,6 +664,11 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   gap: 40px;
 }
 
+
+.footer-container-center-image-second-footer-two{
+  display: none;
+}
+
 /* LEFT LOGO */
 #footer-video{
   height: 100px;
@@ -723,7 +728,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 1200px) {
   #section-form{
     display: flex;
     flex-wrap: wrap;
@@ -771,7 +776,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     height: 320px;
   }
 
-  .commit-and-form {
+  #commit-and-form {
     flex-direction: column;
     align-items: stretch;
     gap: 15px;
@@ -779,7 +784,6 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
   #form-suggestion-new-character-or-comics{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -803,6 +807,24 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     text-align: center;
   }
 
+  .footer-container-center-image-second-footer-two{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .footer-container-center-image-second-footer-two img{
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    display: block;
+  
+  }
+  .footer-container-center-image-second-footer{
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
   
   #footer-container-left,
   .footer-container-center,
@@ -823,7 +845,12 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   }
 
   .footer-container-rigth-red-socials a{
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
     font-size: 32px;
+
   }
 
 
@@ -932,7 +959,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     padding: 10px;
     color: var(--text-light);
     text-decoration: none;
-    border-top: 1 solid var(--medium-gray);
+    border-top: 1px solid var(--medium-gray);
   }
 
   .menu-links a:hover {
@@ -949,12 +976,22 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   }
 
   #commit-and-form {
-    flex-direction: column !important;
+    flex-direction: column;
     align-items: center;
     gap: 15px;
   }
 
 
+  #gotham-city{
+    min-height: 100vh;
+    
+  }
+
+  .image-gotham img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 
   .commit-card,
   #form-suggestion-new-character-or-comics {
@@ -977,8 +1014,13 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     text-align: center;
   }
 
+  .footer-container-center-image-second-footer-two{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+}
   .footer-container-center-image-second-footer{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
   }
