@@ -53,7 +53,7 @@ To run this project on your local environment, follow these steps:
     Simply open the `index.html` file in your web browser. No local web server is required for this basic HTML/CSS/JS project.
 
     📸 Preview
-<img width="1917" height="891" alt="image" src="#" />
+<img width="1917" height="891" alt="image" src="https://media.discordapp.net/attachments/816190062345060364/1440810240705826948/image.png?ex=691f829a&is=691e311a&hm=01ad25f1bd463cf22475465d22dadf0b5fdb82fae44690a694d7fdc4e857ba1f&=&format=webp&quality=lossless&width=550&height=275" />
 
 ## 💡 References and Credits
 
@@ -70,6 +70,7 @@ The design and concept were inspired by the following references (mentioned in t
 
 ---
 **Note:** This is a static **front-end** project. The suggestions form requires server-side logic (back-end) or the use of an external service to actually process and store the submitted data.
+
 
 
 
