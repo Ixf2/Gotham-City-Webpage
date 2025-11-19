@@ -53,7 +53,7 @@ To run this project on your local environment, follow these steps:
     Simply open the `index.html` file in your web browser. No local web server is required for this basic HTML/CSS/JS project.
 
     📸 Preview
-<img width="1917" height="891" alt="image" src="https://media.discordapp.net/attachments/816190062345060364/1440810240705826948/image.png?ex=691f829a&is=691e311a&hm=01ad25f1bd463cf22475465d22dadf0b5fdb82fae44690a694d7fdc4e857ba1f&=&format=webp&quality=lossless&width=550&height=275" />
+<img width="1917" height="891" alt="image" src="https://media.discordapp.net/attachments/816190062345060364/1440810469777735711/image.png?ex=691f82d0&is=691e3150&hm=7519e4313ee402f7c6a978c4d2412bebd79c2181faaf25091cc69b8e52372b5e&=&format=webp&quality=lossless&width=1726&height=864" />
 
 ## 💡 References and Credits
 
