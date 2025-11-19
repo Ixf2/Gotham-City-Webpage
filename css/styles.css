@@ -43,7 +43,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   position: relative;
   z-index: 100;
 
-  padding-top: 100px;
+  padding-top: 0px;
   align-items: flex-start
 }
 
@@ -565,6 +565,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   max-width: 600px;
 }
 
+
 /* FROM */
 #form-suggestion-new-character-or-comics {
   background-color: var(--medium-gray);
@@ -575,6 +576,10 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
   color: var(--text-light);
   gap: 20px;
+}
+
+#form-suggestion-new-character-or-comics h2{
+  margin-bottom: 25px;
 }
 
 #form-suggestion-new-character-or-comics form {
