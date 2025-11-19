@@ -64,10 +64,12 @@ The design and concept were inspired by the following references (mentioned in t
     * [Marvel.com/characters](https://www.marvel.com/characters) (Although the content is DC/Gotham-themed)
     * [DC Fandom Wiki](https://dc.fandom.com/wiki/Category:Waylon_Jones_(Absolute_Universe)/Appearances?from=V)
 * [@sdvictorvergara](https://github.com/sdvictorvergara)
+* [@gunterdev](https://github.com/gunterdev)
 * [@midudev ](https://github.com/midudev)
 * [@tcrurav](https://github.com/tcrurav)
 
 ---
 **Note:** This is a static **front-end** project. The suggestions form requires server-side logic (back-end) or the use of an external service to actually process and store the submitted data.
+
 
 
