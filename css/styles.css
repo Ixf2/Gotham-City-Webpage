@@ -294,8 +294,6 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 }
 
 /* CARDS VILLAINS, SUPER AND COMICS */
-
-
 #villains,
 #supers,
 #comics {
@@ -942,7 +940,6 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     z-index: 10001;
     padding: 0;
     overflow: visible;
-
   }
 
   .main-header-line-lower {
