@@ -294,8 +294,6 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 }
 
 /* CARDS VILLAINS, SUPER AND COMICS */
-
-
 #villains,
 #supers,
 #comics {
@@ -535,11 +533,30 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   padding: 20px;
 }
 
-.commit-card {
-  width: 300px;
-  flex-shrink: 0;
+#suggestions-list-container{
+  max-width: 900px;
+  margin: 20px auto;
 }
 
+.commit-card {
+  width: 550px;
+  flex-shrink: 0;
+
+  border: 2px solid var(--accent-red);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 25px;
+  background-color: var(--dark-gray);
+  box-shadow: 0 0 10px rgba(178, 34, 34, 0.4);
+}
+
+.commit-header{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--text-muted);
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
 #form-suggestion-new-character-or-comics {
   flex: 1;
   max-width: 600px;
@@ -942,7 +959,6 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     z-index: 10001;
     padding: 0;
     overflow: visible;
-
   }
 
   .main-header-line-lower {
