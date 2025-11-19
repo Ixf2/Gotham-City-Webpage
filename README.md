@@ -53,7 +53,7 @@ To run this project on your local environment, follow these steps:
     Simply open the `index.html` file in your web browser. No local web server is required for this basic HTML/CSS/JS project.
 
     📸 Preview
-<img width="1917" height="891" alt="image" src=#" />
+<img width="1917" height="891" alt="image" src="#" />
 
 ## 💡 References and Credits
 
@@ -65,8 +65,9 @@ The design and concept were inspired by the following references (mentioned in t
     * [DC Fandom Wiki](https://dc.fandom.com/wiki/Category:Waylon_Jones_(Absolute_Universe)/Appearances?from=V)
 * [@sdvictorvergara](https://github.com/sdvictorvergara)
 * [@midudev ](https://github.com/midudev)
-* @tcrurav](https://github.com/tcrurav)
+* [@tcrurav](https://github.com/tcrurav)
 
 ---
 **Note:** This is a static **front-end** project. The suggestions form requires server-side logic (back-end) or the use of an external service to actually process and store the submitted data.
+
 
