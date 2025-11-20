@@ -86,8 +86,13 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 .layer-rain {
   mix-blend-mode: screen;
   opacity: 0.7;
-  z-index: 4;
+  z-index: 5;
   pointer-events: none;
+}
+.layer-rain img{
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
 }
 
 .layer-bg,
@@ -112,7 +117,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   width: 250px;
   height: auto;
   position: absolute;
-  left: 50px;
+  left: 350px;
   top: 20px;
   pointer-events: none;
 }
@@ -121,7 +126,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: 3;
+  z-index: 4;
   pointer-events: none;
 }
 
@@ -133,6 +138,22 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   width: auto;
   pointer-events: none;
 }
+
+.layer-logo{
+  z-index: 3;
+  transform: translate(-50%, -50%);
+}
+
+.layer-logo img{
+  width: 250px; 
+  height: auto;
+ position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block; 
+}
+
 
 /* MENU ICON */
 .menu-icon {
@@ -660,6 +681,12 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   margin-bottom: 25px;
 }
 
+.error-msg{
+  color: var(--accent-red);
+  font-size: 0.9rem;
+  margin-top: 2px;
+  display: block;
+}
 #form-suggestion-new-character-or-comics form {
   display: flex;
   flex-direction: column;
