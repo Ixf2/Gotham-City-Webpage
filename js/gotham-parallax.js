@@ -1,11 +1,29 @@
-window.addEventListener('scroll', function() {
-    const scrolled = window.scrollY;
-    // Batman empieza en -200px y se mueve hacia 0px (en pantalla)
-    // El 0.5 es un factor de velocidad (más lento que el scroll de la página)
-    const newLeft = -200 + (scrolled * 0.5);
+// SELECTORES DE CAPAS
+const batman = document.querySelector(".layer-batman img");
+const batsignal = document.querySelector(".layer-batsignal img");
+const logo = document.querySelector(".layer-logo img");
 
-    // Asegurar que no se mueva demasiado hacia la derecha (por ejemplo, hasta 0)
-    const finalLeft = Math.min(0, newLeft);
+// POSICIONES INICIALES
+const batmanStart = 0;
+const batsignalStart = 0;
+const logoStart = 0;
 
-    document.querySelector('.layer-batman').style.transform = `translateX(${finalLeft}px)`;
+// SPEED FACTOR'S
+const batmanSpeed = 0.9; 
+const batsignalSpeed = 0.1;
+const logoSpeed = 0.29;
+
+// FUNCION SCROLL
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // MOVE BATMAN
+  batman.style.transform = `translateX(${scrollY * batmanSpeed}px)`;
+
+  // MOVE BATSIGNAL
+batsignal.style.transform = `translateX(${-scrollY * batsignalSpeed}px)`;
+
+
+  // LOGO MOVE
+  logo.style.transform = ` translateX(${scrollY * logoSpeed}px)`;
 });

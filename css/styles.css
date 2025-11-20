@@ -59,6 +59,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 /* PARALLAX */
 #parallax-container {
+
   position: relative;
   width: 100%;
   height: 100vh;
@@ -139,7 +140,10 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   pointer-events: none;
 }
 
+/* LOGO */
 .layer-logo{
+  width: auto;
+  height: auto;
   z-index: 3;
   transform: translate(-50%, -50%);
 }
