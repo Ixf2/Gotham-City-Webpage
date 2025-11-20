@@ -1,17 +1,17 @@
-// SELECTORES DE CAPAS
+// SELECTOR
 const batman = document.querySelector(".layer-batman img");
 const batsignal = document.querySelector(".layer-batsignal img");
 const logo = document.querySelector(".layer-logo img");
 
-// POSICIONES INICIALES
+// INICIAL POSICION'S
 const batmanStart = 0;
 const batsignalStart = 0;
 const logoStart = 0;
 
 // SPEED FACTOR'S
-const batmanSpeed = 0.9; 
+const batmanSpeed = 0.3; 
 const batsignalSpeed = 0.1;
-const logoSpeed = 0.29;
+const logoSpeed = 0.9;
 
 // FUNCION SCROLL
 window.addEventListener("scroll", () => {
