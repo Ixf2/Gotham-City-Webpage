@@ -3,6 +3,7 @@
 //Reference: https://javascript.info
 //Reference: https://stackoverflow.com/questions/4976344/what-is-dom-summary-and-importance
 //Reference: video to the class for LocalStorage, and valitation.
+//Reference: work the validation https://github.com/tcrurav/JavaScriptFormValidationExample 
 
 
 // ==========================================================
