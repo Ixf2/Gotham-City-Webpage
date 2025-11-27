@@ -10,16 +10,16 @@
 // BLOCK CODE 1
 // ==========================================================
 function createAndDisplaySuggestion(suggestionData) {
-  const list_container = document.getElementById('suggestions-list-container');
+  const LIST_CONTAINER = document.getElementById('suggestions-list-container');
 
-  if (!list_container) return;
+  if (!LIST_CONTAINER) return;
 
-  const suggestion_div = document.createElement('article');
-  suggestion_div.classList.add('commit-card');
-  suggestion_div.dataset.id = suggestionData.date;
+  const SUGGESTION_DIV = document.createElement('article');
+  SUGGESTION_DIV.classList.add('commit-card');
+  SUGGESTION_DIV.dataset.id = suggestionData.date;
 
   //FORMAT DATE. Here i need help to AI. I don´t know how to do it
-  const date = new Date(suggestionData.date).toLocaleDateString();
+  const DATE = new Date(suggestionData.date).toLocaleDateString();
 
   let contentHTML = `
         <div class="commit-header">
@@ -29,7 +29,7 @@ function createAndDisplaySuggestion(suggestionData) {
         </div>
         <div class="commit-body">
             <p class="commit-text">Suggestion: <span>${suggestionData.suggestion}</span></p>
-            <p class="commit-date">Submitted on: ${date}</p>
+            <p class="commit-date">Submitted on: ${DATE}</p>
         </div>
         <div class="commit-img">`;
 
@@ -44,48 +44,48 @@ function createAndDisplaySuggestion(suggestionData) {
 
   contentHTML += `</div>`;
 
-  suggestion_div.innerHTML = contentHTML;
-  list_container.prepend(suggestion_div);
+  SUGGESTION_DIV.innerHTML = contentHTML;
+  LIST_CONTAINER.prepend(SUGGESTION_DIV);
 
-  suggestion_div.querySelector('.delete-btn').addEventListener('click', handleDeleteSuggestion);
+  SUGGESTION_DIV.querySelector('.delete-btn').addEventListener('click', handleDeleteSuggestion);
 }
 
 function handleDeleteSuggestion(e) {
-  const id_to_delete = e.target.dataset.id;
+  const ID_TO_DELETE = e.target.dataset.id;
 
-  const suggestions_element = e.target.closest('.commit-card');
-  if (suggestions_element) {
-    suggestions_element.remove();
+  const SUGGESTIONS_ELEMENT = e.target.closest('.commit-card');
+  if (SUGGESTIONS_ELEMENT) {
+    SUGGESTIONS_ELEMENT.remove();
   }
 
   let existing_suggestions = JSON.parse(localStorage.getItem('suggestions')) || [];
 
   existing_suggestions = existing_suggestions.filter(
-    suggestion => suggestion.date !== id_to_delete
+    suggestion => suggestion.date !== ID_TO_DELETE
   );
 
   localStorage.setItem('suggestions', JSON.stringify(existing_suggestions));
 
-  alert(`Sugerencia (ID: ${id_to_delete}) eliminada correctamente.`);
+  alert(`Sugerencia (ID: ${ID_TO_DELETE}) eliminada correctamente.`);
 }
 
 
 
 //Funtion aux for guard centrel and previsualitation
 function saveAndDisplay(data) {
-  const form = document.querySelector('#form-suggestion-new-character-or-comics form');
+  const FORM = document.querySelector('#form-suggestion-new-character-or-comics form');
   // LOCALSTORAGE
-  const existing_suggestions = JSON.parse(localStorage.getItem('suggestions')) || [];
-  existing_suggestions.push(data);
-  localStorage.setItem('suggestions', JSON.stringify(existing_suggestions));
+  const EXISTING_SUGGESTIONS = JSON.parse(localStorage.getItem('suggestions')) || [];
+  EXISTING_SUGGESTIONS.push(data);
+  localStorage.setItem('suggestions', JSON.stringify(EXISTING_SUGGESTIONS));
 
   //Read immediacy.
   createAndDisplaySuggestion(data);
 
   alert('Form submitted successfully and saved locally!');
 
-  if (form) {
-    form.reset();
+  if (FORM) {
+    FORM.reset();
   }
 }
 
@@ -95,9 +95,9 @@ function saveAndDisplay(data) {
 // BLOCK CODE 2
 // ==========================================================
 document.addEventListener('DOMContentLoaded', function () {
-  const existing_suggestions = JSON.parse(localStorage.getItem('suggestions')) || [];
+  const EXISTING_SUGGESTIONS = JSON.parse(localStorage.getItem('suggestions')) || [];
 
-  existing_suggestions.forEach(suggestion => {
+  EXISTING_SUGGESTIONS.forEach(suggestion => {
     createAndDisplaySuggestion(suggestion);
   });
 });
@@ -189,69 +189,69 @@ document.addEventListener('DOMContentLoaded', function () {
 // BLOCK CODE 4. VALIDATION
 // ==========================================================
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector('#form-suggestion-new-character-or-comics form');
+  const FORM = document.querySelector('#form-suggestion-new-character-or-comics form');
 
-  form.addEventListener("submit", function (e) {
+  FORM.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const name = document.getElementById("name-and-surname");
-    const email = document.getElementById("Email");
-    const suggestion = document.getElementById("suggestion-text");
-    const img = document.getElementById("img-suggestion").files[0];
+    const NAME = document.getElementById("name-and-surname");
+    const EMAIL = document.getElementById("Email");
+    const SUGGESTION = document.getElementById("suggestion-text");
+    const IMG = document.getElementById("img-suggestion").files[0];
 
-    const nameError = name.parentElement.querySelector('.error-msg');
-    const emailError = email.parentElement.querySelector('.error-msg');
-    const suggestionError = suggestion.parentElement.querySelector('.error-msg');
+    const NAME_ERROR = NAME.parentElement.querySelector('.error-msg');
+    const EMAIL_ERROR = EMAIL.parentElement.querySelector('.error-msg');
+    const SUGGESTION_ERROR = SUGGESTION.parentElement.querySelector('.error-msg');
 
     let valid = true;
 
-    nameError.textContent = "";
-    emailError.textContent = "";
-    suggestionError.textContent = "";
+    NAME_ERROR.textContent = "";
+    EMAIL_ERROR.textContent = "";
+    SUGGESTION_ERROR.textContent = "";
 
     //Validations
-    if (!name.value.trim()) {
-      nameError.textContent = "* required field";
+    if (!NAME.value.trim()) {
+      NAME_ERROR.textContent = "* required field";
       valid = false;
     }
 
-    if (!email.value.trim()) {
-      emailError.textContent = "* required field";
+    if (!EMAIL.value.trim()) {
+      EMAIL_ERROR.textContent = "* required field";
       valid = false;
     } else {
-      const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!email_pattern.test(email.value)) {
-        emailError.textContent = "* Invalid email";
+      const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!EMAIL_PATTERN.test(EMAIL.value)) {
+        EMAIL_ERROR.textContent = "* Invalid email";
         valid = false;
       }
     }
 
 
-    if (!suggestion.value.trim()) {
-      suggestionError.textContent = "* required field";
+    if (!SUGGESTION.value.trim()) {
+      SUGGESTION_ERROR.textContent = "* required field";
       valid = false;
     }
 
     if (!valid) return;
     //This validation is OK
     if (valid) {
-      if (img) {
-        const reader = new FileReader();
-        reader.onload = function (event) {
+      if (IMG) {
+        const READER = new FileReader();
+        READER.onload = function (event) {
           saveAndDisplay({
-            name: name.value.trim(),
-            email: email.value.trim(),
-            suggestion: suggestion.value.trim(),
+            name: NAME.value.trim(),
+            email: EMAIL.value.trim(),
+            suggestion: SUGGESTION.value.trim(),
             imageBase64: event.target.result,
             date: new Date().toISOString()
           });
         }
-        reader.readAsDataURL(img);
+        READER.readAsDataURL(IMG);
       } else {
         saveAndDisplay({
-          name: name.value.trim(),
-          email: email.value.trim(),
-          suggestion: suggestion.value.trim(),
+          name: NAME.value.trim(),
+          email: EMAIL.value.trim(),
+          suggestion: SUGGESTION.value.trim(),
           imageBase64: null,
           date: new Date().toISOString()
         });
