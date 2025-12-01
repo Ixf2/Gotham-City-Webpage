@@ -23,7 +23,7 @@ function createAndDisplaySuggestion(suggestionData) {
 
   let contentHTML = `
         <div class="commit-header">
-            <p class="commit-name">First Name and Surname: <strong>${suggestionData.name}</strong></p>
+            <p class="commit-name">Name or Nickname: <strong>${suggestionData.name}</strong></p>
             <p class="commit-name">Email: <strong>${suggestionData.email}</strong></p>
             <button class="delete-btn" data-id="${suggestionData.date}">❌ Eliminar</button>
         </div>

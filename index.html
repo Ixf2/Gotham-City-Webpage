@@ -4,6 +4,8 @@
 <!-- Reference for creating the page content: https://www.marvel.com/characters -->
 <!-- Reference for creating the page content: https://dribbble.com/shots/24297211-Bento-Cards-v2-AI- -->
 <!-- Reference content: https://dc.fandom.com/wiki/Category:Waylon_Jones_(Absolute_Universe)/Appearances?from=V -->
+<!-- Reference windows modals https://auladiv.com/snippets/modales/index.html-->
+<!-- Reference w3c window modal https://www.w3schools.com/howto/howto_css_modals.asp-->
 
 
 <head>
@@ -474,8 +476,8 @@
 
               <form method="post" enctype="multipart/form-data">
                 <div class="input-group">
-                  <label for="name-and-surname">Name and surname</label>
-                  <input id="name-and-surname" type="text" name="name-and-surname" placeholder="Firs name and surname">
+                  <label for="name-and-surname">Name</label>
+                  <input id="name-and-surname" type="text" name="name-and-surname" placeholder="Name or nickname">
                   <span class="error-msg"></span>
                 </div>
 
@@ -500,6 +502,32 @@
                 <div class="input-group">
                   <input id="submit-send" type="submit" value="Send">
                 </div>
+
+                <div class="crud-update-form">
+                  <input type="button" value="Base De Datos">
+                </div>
+
+                <!--WINDOWS MODAL-->
+                <div id="windows-modal-update-form" class="modal">
+                  <!--MODAL CONTENT-->
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Dates the commits</p>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Suggestion</th>
+                        </tr>
+                      </thead>
+                      <tbody id="db-content">
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
               </form>
             </section>
           </div>
