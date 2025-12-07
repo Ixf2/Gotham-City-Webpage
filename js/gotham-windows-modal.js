@@ -122,7 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-//
 function redrawSuggestionsList() {
   const LIST_CONTAINER = document.getElementById("suggestions-list-container");
   

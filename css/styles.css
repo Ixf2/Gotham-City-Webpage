@@ -1,4 +1,4 @@
-/* Para cuadrar todas las ventanas en el navegador */
+
 /* To align all windows in the browser */
 * {
   margin: 0;
@@ -6,9 +6,6 @@
   border: 0;
   box-sizing: border-box;
 }
-
-
-
 
 
 /*ROOT SECTOR VARIABLE COLORS 
@@ -35,9 +32,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 body,
 html {
-  /* Asegura que no haya un ancho extra añadido */
   width: 100%;
-  /* La clave para que el contenido que se salga del viewport se oculte */
   overflow-x: hidden;
 }
 
@@ -61,7 +56,6 @@ html {
   padding-top: 0px;
   align-items: flex-start
 }
-
 
 
 /* FONT ALL*/
@@ -141,7 +135,6 @@ html {
 }
 
 
-
 /* BATSIGNAL */
 .layer-batsignal {
   width: auto;
@@ -201,8 +194,6 @@ html {
     opacity: 0.95; 
   }
 }
-
-
 
 
 .layer-batman {
@@ -278,9 +269,6 @@ html {
     transform: scale(1);
   }
 }
-
-
-
 
 
 
