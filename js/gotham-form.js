@@ -258,5 +258,29 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
+
+    //BLOCK 5 - FUNCION RESFRESH PAGE FOR LOCALSTORAGE
+    function reloadSuggestionList() {
+      const LIST_CONTAINER = document.getElementById('suggestions-list-container');
+      if (!LIST_CONTAINER) return;
+
+      LIST_CONTAINER.innerHTML = ""; // limpiar
+
+      const SUGGESTIONS = JSON.parse(localStorage.getItem('suggestions')) || [];
+
+      SUGGESTIONS.forEach(sugg => createAndDisplaySuggestion(sugg));
+    }
+
+    function redrawSuggestionsList() {
+      const LIST_CONTAINER = document.getElementById("suggestions-list-container");
+      if (!LIST_CONTAINER) return;
+
+      LIST_CONTAINER.innerHTML = ""; // Limpiar
+
+      const EXISTING_SUGGESTIONS = JSON.parse(localStorage.getItem("suggestions")) || [];
+      EXISTING_SUGGESTIONS.forEach(s => createAndDisplaySuggestion(s));
+    }
+
+
   });
 });
