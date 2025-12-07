@@ -25,7 +25,7 @@ function createAndDisplaySuggestion(suggestionData) {
         <div class="commit-header">
             <p class="commit-name">Name or Nickname: <strong>${suggestionData.name}</strong></p>
             <p class="commit-name">Email: <strong>${suggestionData.email}</strong></p>
-            <button class="delete-btn" data-id="${suggestionData.date}">❌ Eliminar</button>
+            <button class="delete-btn" data-id="${suggestionData.date}"></button>
         </div>
         <div class="commit-body">
             <p class="commit-text">Suggestion: <span>${suggestionData.suggestion}</span></p>
@@ -66,7 +66,9 @@ function handleDeleteSuggestion(e) {
 
   localStorage.setItem('suggestions', JSON.stringify(existing_suggestions));
 
-  alert(`Sugerencia (ID: ${ID_TO_DELETE}) eliminada correctamente.`);
+  //alert(`Sugerencia (ID: ${ID_TO_DELETE}) eliminada correctamente.`);
+  const MESSAGE = document.getElementById('message-container');
+  if (MESSAGE) MESSAGE.textContent = `Suggestions eliminated.`;
 }
 
 
@@ -82,7 +84,10 @@ function saveAndDisplay(data) {
   //Read immediacy.
   createAndDisplaySuggestion(data);
 
-  alert('Form submitted successfully and saved locally!');
+  //alert('Form submitted successfully and saved locally!');
+  const MESSAGE = document.getElementById('message-container');
+  if (MESSAGE) MESSAGE.textContent = 'Save and send form complety.';
+
 
   if (FORM) {
     FORM.reset();

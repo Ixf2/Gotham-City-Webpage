@@ -777,7 +777,12 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   inset: 0;
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 /* CONTENT MODAL */
 .modal-content {
@@ -800,13 +805,14 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 }
 
 
-.modal-content > p {
+
+.modal-content>p {
   font-size: 22px;
   font-weight: bold;
   margin: 0 0 15px 0;
 }
 
-.modal-content > .close {
+.modal-content>.close {
   float: right;
   font-size: 45px;
   color: var(--accent-red);
@@ -859,7 +865,130 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   background-color: var(--accent-red-dark);
 }
 
+/*STYLE BUTTON*/
 
+#modal-edit-suggestion button,
+#modal-delete-confirm button,
+#windows-modal-update-form button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+
+  background-color: var(--accent-red);
+  color: var(--text-light);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  flex: 1 1 auto; 
+  min-width: 100px;
+  margin: 5px 3px; 
+}
+
+
+#modal-edit-suggestion button,
+#modal-delete-confirm button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+
+  background-color: var(--accent-red);
+  color: var(--text-light);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  width: auto;   
+  min-width: 120px; 
+  margin: 5px;    
+  flex: none;     
+}
+
+
+#modal-edit-suggestion button:hover,
+#modal-delete-confirm button:hover {
+  background-color: var(--accent-red-dark);
+  transform: scale(1.05);
+  color: var(--text-light);
+}
+
+
+#modal-edit-suggestion .modal-content,
+#modal-delete-confirm .modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#modal-edit-suggestion .modal-buttons,
+#modal-delete-confirm .modal-buttons {
+  display: flex;
+  flex-wrap: wrap;      
+  justify-content: flex-end; 
+  gap: 10px;             
+  margin-top: 15px;
+}
+
+/*STYLE BUTTON DATABASE AND MESSAGE*/
+.crud-update-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.crud-update-form input[type="button"] {
+  background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
+  color: var(--text-light);
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(178, 34, 34, 0.4);
+}
+
+.crud-update-form input[type="button"]:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(178, 34, 34, 0.6);
+}
+
+/* message-container */
+#message-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  background-color: rgba(255, 255, 224, 0.1);
+  border-left: 6px solid var(--accent-red);
+  border-radius: 10px;
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+
+  opacity: 0;          
+  transform: translateY(-10px); 
+  pointer-events: none; 
+  transition: all 0.5s ease; 
+}
+
+
+#message-container.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  box-shadow: 0 0 20px var(--accent-red); 
+}
+
+
+@keyframes fadeInMessage {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 
 /*FOOTER*/
@@ -1028,7 +1157,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   }
 
   /*MODAL TABLET*/
-   .modal-content {
+  .modal-content {
     width: 95%;
     max-width: 600px;
     height: 75vh;
@@ -1049,73 +1178,88 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     overflow-y: auto;
     overflow-x: hidden;
   }
+  .modal-content {
+    width: 95%;
+    max-width: 600px;
+    height: 75vh;
+    padding: 15px;
+  }
+
+  .modal-content thead th,
+  .modal-content td {
+    font-size: 0.9rem;
+  }
+
+  .modal-content tbody {
+    max-height: 55vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
 }
 
 
-  /* FOOTER - TABLET */
-  #footer-container {
-    height: auto;
-    padding: 30px 0;
-  }
 
-  .footer-container {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    text-align: center;
-  }
+/* FOOTER - TABLET */
+#footer-container {
+  height: auto;
+  padding: 30px 0;
+}
 
-  .footer-container-center-image-second-footer-two {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.footer-container {
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  text-align: center;
+}
 
-  .footer-container-center-image-second-footer-two img {
-    max-width: 120px;
-    width: 100%;
-    height: auto;
-    display: block;
+.footer-container-center-image-second-footer-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  }
-
-  .footer-container-center-image-second-footer {
-    display: none;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #footer-container-left,
-  .footer-container-center,
-  .footer-container-rigth {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  /* GIF FOOTER */
-  #footer-video {
-    display: none;
-  }
-
-  .nav-menu-container-center ul {
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  .footer-container-rigth-red-socials a {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    text-align: center;
-    font-size: 32px;
-
-  }
-
-
-
+.footer-container-center-image-second-footer-two img {
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  display: block;
 
 }
+
+.footer-container-center-image-second-footer {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-container-left,
+.footer-container-center,
+.footer-container-rigth {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* GIF FOOTER */
+#footer-video {
+  display: none;
+}
+
+.nav-menu-container-center ul {
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-container-rigth-red-socials a {
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  text-align: center;
+  font-size: 32px;
+
+}
+
+
 
 
 /* Extra small devices (phones, 600px and down) */
@@ -1258,24 +1402,25 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   }
 
   /*MODAL MOBILE*/
- 
+
   .modal-content {
     width: 98%;
     padding: 10px;
     height: 70vh;
   }
 
-  /* Cabecera fija arriba y cuerpo scrollable */
+
   .modal-content table {
     display: block;
     width: 100%;
   }
 
   .modal-content thead {
-    display: none; /* Ocultamos header en mobile */
+    display: none;
+ 
   }
 
-  /* Formato "cards" por fila */
+
   .modal-content tbody tr {
     display: block;
     padding: 12px;
@@ -1293,7 +1438,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     border: none;
   }
 
-  /* Etiquetas automáticas para mobile */
+
   .modal-content td::before {
     content: attr(data-label);
     font-weight: bold;
@@ -1301,77 +1446,75 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     margin-right: 10px;
   }
 
-  /* Scroll solo vertical */
+
   .modal-content tbody {
     max-height: 60vh;
     overflow-y: auto;
     overflow-x: hidden;
   }
 
-  /* Botón de cierre */
+
   .modal-content .close {
     font-size: 30px;
   }
 }
 
 
-  /* FOOTER - MOBILE */
-  #footer-container {
-    height: auto;
-    padding: 0 0;
-  }
+
+
+/* FOOTER - MOBILE */
+#footer-container {
+  height: auto;
+  padding: 0 0;
+}
 
 
 
-  .footer-container {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    text-align: center;
-  }
+.footer-container {
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  text-align: center;
+}
 
-  .footer-container-center-image-second-footer-two {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.footer-container-center-image-second-footer-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .footer-container-center-image-second-footer {
-    display: none;
-    justify-content: center;
-    align-items: center;
-  }
+.footer-container-center-image-second-footer {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
 
-  .footer-container-center-image-second-footer img {
-    max-width: 120px;
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+.footer-container-center-image-second-footer img {
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-  #footer-container-left,
-  .footer-container-center,
-  .footer-container-rigth {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
+#footer-container-left,
+.footer-container-center,
+.footer-container-rigth {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
-  /* GIF FOOTER */
-  #footer-video {
-    display: none;
-  }
+/* GIF FOOTER */
+#footer-video {
+  display: none;
+}
 
-  .nav-menu-container-center ul {
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.nav-menu-container-center ul {
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  .footer-container-rigth-red-socials a {
-    font-size: 25px;
-  }
-
-
-
+.footer-container-rigth-red-socials a {
+  font-size: 25px;
 }

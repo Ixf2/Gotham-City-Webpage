@@ -506,62 +506,62 @@
                 <div class="crud-update-form">
                   <input type="button" value="Base De Datos">
                 </div>
+                <div id="message-container">Save and send form complety.</div>
 
                 <!--WINDOWS MODAL-->
                 <!-- Modal de Base de Datos -->
                 <!-- Modal de Base De Datos -->
                 <div id="windows-modal-update-form" class="modal">
-                  <div class="modal modal-small" id="small-modal">
-                    <div class="modal-content">
-                      <span class="close">&times;</span>
-                      <p>Saved Suggestions</p>
-                      <table>
-                        <thead>
-                          <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Suggestion</th>
-                            <th>Image</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-                          </tr>
-                        </thead>
-                        <tbody id="db-content">
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Edit windows modal-->
-                <div id="modal-edit-suggestion" class="modal">
                   <div class="modal-content">
                     <span class="close">&times;</span>
-                    <h3>Edit Suggestion</h3>
-                    <label>Name:</label>
-                    <input type="text" id="edit-name" placeholder="Name">
-                    <label>Email:</label>
-                    <input type="text" id="edit-email" placeholder="Email">
-                    <label>Suggestion:</label>
-                    <textarea id="edit-text" rows="4" placeholder="Suggestion"></textarea>
-                    <button type="button" id="save-edit">Save</button>
+                    <p>Saved Suggestions</p>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Suggestion</th>
+                          <th>Image</th>
+                          <th>Edit</th>
+                          <th>Delete</th>
+                        </tr>
+                      </thead>
+                      <tbody id="db-content">
+                      </tbody>
+                    </table>
                   </div>
                 </div>
-
-                <!-- Confirm eliminate -->
-                <div id="modal-delete-confirm" class="modal">
-                  <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Are you sure you want to delete this suggestion?</p>
-                    <button type="button" id="confirm-delete">Yes, delete</button>
-                    <button type="button" id="cancel-delete">Cancel</button>
-                  </div>
-                </div>
-              </form>
-            </section>
           </div>
+
+          <!-- Edit windows modal-->
+          <div id="modal-edit-suggestion" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h3>Edit Suggestion</h3>
+              <label>Name:</label>
+              <input type="text" id="edit-name" placeholder="Name">
+              <label>Email:</label>
+              <input type="text" id="edit-email" placeholder="Email">
+              <label>Suggestion:</label>
+              <textarea id="edit-text" rows="4" placeholder="Suggestion"></textarea>
+              <button type="button" id="save-edit">Save</button>
+            </div>
+          </div>
+
+          <!-- Confirm eliminate -->
+          <div id="modal-delete-confirm" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Are you sure you want to delete this suggestion?</p>
+              <button type="button" id="confirm-delete">Yes, delete</button>
+              <button type="button" id="cancel-delete">Cancel</button>
+            </div>
+          </div>
+          </form>
+          </section>
         </div>
       </div>
+    </div>
     </div>
   </main>
 
