@@ -25,5 +25,5 @@ window.addEventListener("scroll", () => {
 
 
   // LOGO MOVE
-  LOGO.style.transform = ` translateX(${SCROLL_Y * LOGO_SPEED}px)`;
+  LOGO.style.transform = ` translateX(${-SCROLL_Y * LOGO_SPEED}px)`;
 });
