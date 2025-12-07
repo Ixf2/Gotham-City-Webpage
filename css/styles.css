@@ -114,7 +114,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   width: auto;
   height: auto;
   position: absolute;
-  left: 40px;
+  left: 350px;
   top: 10%;
   z-index: 2;
   pointer-events: none;
@@ -778,9 +778,6 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
 
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
 }
 
 
@@ -995,13 +992,13 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 #footer-container {
   width: 100%;
   background-color: var(--dark-bg);
-  padding: 20px 0;
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
-  width: 100%;
+  height: auto;
+  min-height: 300px;
   position: relative;
 }
 
@@ -1085,6 +1082,41 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   transform: scale(1.15);
   color: var(--accent-red);
 }
+
+
+/*SCROLL ANIMATED*/
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+
+.scroll-animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -1172,8 +1204,8 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     font-size: 0.9rem;
   }
 
-  /* Mantener scroll vertical sin scroll lateral */
-  .modal-content tbody {
+  
+    .modal-content tbody {
     max-height: 55vh;
     overflow-y: auto;
     overflow-x: hidden;
@@ -1195,7 +1227,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     overflow-y: auto;
     overflow-x: hidden;
   }
-}
+
 
 
 
@@ -1258,6 +1290,25 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   font-size: 32px;
 
 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1457,7 +1508,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   .modal-content .close {
     font-size: 30px;
   }
-}
+
 
 
 
@@ -1518,3 +1569,12 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 .footer-container-rigth-red-socials a {
   font-size: 25px;
 }
+
+.text-gotham.scroll-animate {
+    transform: translateX(0);
+  }
+  .character-card.scroll-animate {
+    transform: translateY(30px);
+  }
+
+  }
