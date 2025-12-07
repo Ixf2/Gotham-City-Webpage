@@ -8,9 +8,8 @@
 }
 
 
-/* body{
-  cursor: url(img/icons/mouse-batman.webp);
-}  */
+
+
 
 /*ROOT SECTOR VARIABLE COLORS 
 REFERENCE: https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/:root
@@ -34,6 +33,17 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   --highlight: #f05555;
 }
 
+body,
+html {
+  /* Asegura que no haya un ancho extra añadido */
+  width: 100%;
+  /* La clave para que el contenido que se salga del viewport se oculte */
+  overflow-x: hidden;
+}
+
+/* body {
+  cursor: url('../img/icons/mouse-batman.cur') 16 16, auto;
+} */
 
 /* Extra large devices (large laptops and desktops, 1200px and up)
 @media only screen and (min-width: 1200px) { */
@@ -92,7 +102,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 .layer-rain {
   mix-blend-mode: screen;
   opacity: 0.7;
-  z-index: 5;
+  z-index: 7;
   pointer-events: none;
 }
 
@@ -109,6 +119,19 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   object-fit: cover;
 }
 
+.layer-bat-animal{
+  mix-blend-mode: screen;
+  opacity: 0.7;
+  z-index: 7;
+  pointer-events: none;
+}
+
+.layer-bat-animal img{
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
 /* BATSIGNAL */
 .layer-batsignal {
   width: auto;
@@ -116,9 +139,10 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   position: absolute;
   left: 350px;
   top: 10%;
-  z-index: 2;
+  z-index: 3;
   pointer-events: none;
 }
+
 
 .layer-batsignal img {
   width: 250px;
@@ -127,14 +151,56 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   left: 350px;
   top: 20px;
   pointer-events: none;
+  
+
+  filter: 
+    drop-shadow(0 0 15px rgba(255, 255, 0, 1)) 
+    drop-shadow(0 0 30px rgba(255, 140, 0, 0.7)); 
+  transform: rotateZ(-5deg); 
+  /*I have to search the animation name to IA's*/
+  animation: 
+    diagonal-move 6s ease-in-out infinite alternate, 
+    flicker-batsignal 4s step-end infinite;          
 }
+
+
+@keyframes diagonal-move {
+  0% {
+   
+    transform: translate(0, 0) rotateZ(-5deg); 
+  }
+  50% {
+    
+    transform: translate(-10px, -15px) rotateZ(-4.5deg); 
+  }
+  100% {
+    
+    transform: translate(10px, 5px) rotateZ(-5.5deg);
+  }
+}
+
+
+@keyframes flicker-batsignal {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1; 
+  }
+  20%, 24%, 55% {
+    opacity: 0.8; 
+  }
+  35%, 36%, 70%, 71% {
+    opacity: 0.95; 
+  }
+}
+
+
+
 
 .layer-batman {
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: 4;
-  pointer-events: none;
+  z-index: 5;
+
 }
 
 .layer-batman img {
@@ -148,9 +214,14 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 /* LOGO */
 .layer-logo {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+  height: 85vh;
+  pointer-events: none;
   width: auto;
   height: auto;
-  z-index: 3;
+  z-index: 4;
   transform: translate(-50%, -50%);
 }
 
@@ -161,12 +232,51 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   top: 50%;
   left: 50%;
   display: block;
+
 }
+
+/*BATMAN PERFIL*/
+.layer-batman-perfil {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 6;
+}
+
+.layer-batman-perfil img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 85vh;
+  pointer-events: none;
+  overflow: hidden;
+  animation: pulse-batman 4.3s ease-in-out infinite alternate;
+
+  transform-origin: bottom left;
+}
+
+@keyframes pulse-batman {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.025);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
 
 
 /* MENU ICON */
 .menu-icon {
-  display: none;
+  display: none !important;
   cursor: pointer;
 }
 
@@ -546,9 +656,11 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 .character-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1), rgba(0,0,0,0.2));
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
   pointer-events: none;
   transition: background-position 0.1s ease, opacity 0.2s ease;
   opacity: 0;
@@ -905,9 +1017,9 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   color: var(--text-light);
   transition: background-color 0.3s ease, transform 0.2s ease;
 
-  flex: 1 1 auto; 
+  flex: 1 1 auto;
   min-width: 100px;
-  margin: 5px 3px; 
+  margin: 5px 3px;
 }
 
 
@@ -924,10 +1036,10 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   color: var(--text-light);
   transition: background-color 0.3s ease, transform 0.2s ease;
 
-  width: auto;   
-  min-width: 120px; 
-  margin: 5px;    
-  flex: none;     
+  width: auto;
+  min-width: 120px;
+  margin: 5px;
+  flex: none;
 }
 
 
@@ -948,9 +1060,9 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 #modal-edit-suggestion .modal-buttons,
 #modal-delete-confirm .modal-buttons {
   display: flex;
-  flex-wrap: wrap;      
-  justify-content: flex-end; 
-  gap: 10px;             
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
   margin-top: 15px;
 }
 
@@ -994,10 +1106,10 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
 
-  opacity: 0;          
-  transform: translateY(-10px); 
-  pointer-events: none; 
-  transition: all 0.5s ease; 
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.5s ease;
 }
 
 
@@ -1005,13 +1117,20 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-  box-shadow: 0 0 20px var(--accent-red); 
+  box-shadow: 0 0 20px var(--accent-red);
 }
 
 
 @keyframes fadeInMessage {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
@@ -1231,12 +1350,13 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
     font-size: 0.9rem;
   }
 
-  
-    .modal-content tbody {
+
+  .modal-content tbody {
     max-height: 55vh;
     overflow-y: auto;
     overflow-x: hidden;
   }
+
   .modal-content {
     width: 95%;
     max-width: 600px;
@@ -1258,65 +1378,65 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 
 
-/* FOOTER - TABLET */
-#footer-container {
-  height: auto;
-  padding: 30px 0;
-}
+  /* FOOTER - TABLET */
+  #footer-container {
+    height: auto;
+    padding: 30px 0;
+  }
 
-.footer-container {
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-  text-align: center;
-}
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
 
-.footer-container-center-image-second-footer-two {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .footer-container-center-image-second-footer-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.footer-container-center-image-second-footer-two img {
-  max-width: 120px;
-  width: 100%;
-  height: auto;
-  display: block;
+  .footer-container-center-image-second-footer-two img {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    display: block;
 
-}
+  }
 
-.footer-container-center-image-second-footer {
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
+  .footer-container-center-image-second-footer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
 
-#footer-container-left,
-.footer-container-center,
-.footer-container-rigth {
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
+  #footer-container-left,
+  .footer-container-center,
+  .footer-container-rigth {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 
-/* GIF FOOTER */
-#footer-video {
-  display: none;
-}
+  /* GIF FOOTER */
+  #footer-video {
+    display: none;
+  }
 
-.nav-menu-container-center ul {
-  gap: 15px;
-  flex-wrap: wrap;
-}
+  .nav-menu-container-center ul {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
 
-.footer-container-rigth-red-socials a {
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-  text-align: center;
-  font-size: 32px;
+  .footer-container-rigth-red-socials a {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+    font-size: 32px;
 
-}
+  }
 }
 
 
@@ -1495,7 +1615,7 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
   .modal-content thead {
     display: none;
- 
+
   }
 
 
@@ -1540,68 +1660,69 @@ I need to use the chatgtp  to know what colors to use, and how i can create it*/
 
 
 
-/* FOOTER - MOBILE */
-#footer-container {
-  height: auto;
-  padding: 0 0;
-}
+  /* FOOTER - MOBILE */
+  #footer-container {
+    height: auto;
+    padding: 0 0;
+  }
 
 
 
-.footer-container {
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-  text-align: center;
-}
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
 
-.footer-container-center-image-second-footer-two {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .footer-container-center-image-second-footer-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.footer-container-center-image-second-footer {
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
+  .footer-container-center-image-second-footer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
 
-.footer-container-center-image-second-footer img {
-  max-width: 120px;
-  width: 100%;
-  height: auto;
-  display: block;
-}
+  .footer-container-center-image-second-footer img {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-#footer-container-left,
-.footer-container-center,
-.footer-container-rigth {
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
+  #footer-container-left,
+  .footer-container-center,
+  .footer-container-rigth {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 
-/* GIF FOOTER */
-#footer-video {
-  display: none;
-}
+  /* GIF FOOTER */
+  #footer-video {
+    display: none;
+  }
 
-.nav-menu-container-center ul {
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  .nav-menu-container-center ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.footer-container-rigth-red-socials a {
-  font-size: 25px;
-}
+  .footer-container-rigth-red-socials a {
+    font-size: 25px;
+  }
 
-.text-gotham.scroll-animate {
+  .text-gotham.scroll-animate {
     transform: translateX(0);
   }
+
   .character-card.scroll-animate {
     transform: translateY(30px);
   }
 
-  }
+}

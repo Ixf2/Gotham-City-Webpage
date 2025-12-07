@@ -1,3 +1,10 @@
+//References https://www.sitepoint.com/css-houdini-3d-card-flip-animation/
+//References https://micku7zu.github.io/vanilla-tilt.js/
+//References https://gijsroge.github.io/tilt.js/
+//References IA's for the compose and organization the JS
+
+
+//CHARACTER'S CARD'S ANIMATED
 const CARDS = document.querySelectorAll('.character-card');
 
 CARDS.forEach(card => {
@@ -23,7 +30,7 @@ CARDS.forEach(card => {
 
 
         card.style.transform = `rotateX(${-TITL_X}deg) rotateY(${TILT_Y}deg)`;
-        card.style.boxShadow = `${-SHADOW_X}px ${-SHADOW_Y}px 40px rgba(255, 0, 0, 0.5)`;
+        card.style.boxShadow = `${-SHADOW_X}px ${-SHADOW_Y}px 40px rgba(255, 0, 0, 0.7)`;
         card.classList.add('hovered');
     });
 
