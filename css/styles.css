@@ -463,6 +463,166 @@ html {
 /*------------------------ MAIN -------------------------------*/
 /*-------------------------------------------------------------*/
 
+/*CHAT FIREBASE*/
+#chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--accent-red);
+  color: var(--text-light);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(178,34,34,0.5);
+  z-index: 10001;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+#chat-icon:hover {
+  transform: scale(1.1);
+  background-color: var(--accent-red-dark);
+}
+
+
+#chat-container {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  max-width: 90%;
+  height: 500px;
+  background-color: var(--dark-gray);
+  border: 2px solid var(--accent-red);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(178, 34, 34, 0.5);
+  z-index: 10000;
+  font-family: "RobotoCondensed Bold", Helvetica, Arial, sans-serif;
+}
+
+#chat-header {
+  background-color: var(--medium-gray);
+  color: var(--text-light);
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--accent-red-dark);
+  cursor: move; 
+}
+
+#chat-header .close-chat {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--accent-red);
+  transition: transform 0.2s ease;
+}
+
+#chat-header .close-chat:hover {
+  transform: scale(1.2);
+}
+
+/* BLOCK MESSAGES*/
+#chat-messages {
+  flex: 1;
+  padding: 15px;
+  background-color: var(--dark-bg);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-red) var(--dark-gray);
+}
+#chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+  background-color: var(--accent-red);
+  border-radius: 10px;
+}
+
+#chat-messages::-webkit-scrollbar-track {
+  background-color: var(--dark-gray);
+}
+
+/*MESSAGES CHAT*/
+.chat-message {
+  max-width: 75%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, var(--accent-red), var(--accent-orange));
+  color: var(--text-light);
+}
+
+.chat-message.bot {
+  align-self: flex-start;
+  background-color: var(--medium-gray);
+  color: var(--text-light);
+}
+
+#chat-input-container {
+  display: flex;
+  padding: 10px 15px;
+  gap: 10px;
+  background-color: var(--dark-gray);
+  border-top: 2px solid var(--accent-red-dark);
+}
+
+#chat-input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 2px solid var(--medium-gray);
+  background-color: var(--medium-gray);
+  color: var(--text-light);
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#chat-input:focus {
+  border-color: var(--accent-red);
+  box-shadow: 0 0 8px var(--accent-red), 0 0 16px var(--accent-red-dark);
+}
+
+#chat-send-button {
+  padding: 10px 20px;
+  background-color: var(--accent-red);
+  color: var(--text-light);
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#chat-send-button:hover {
+  background-color: var(--accent-red-dark);
+  transform: scale(1.05);
+}
+
+/*GOTHAM CITY*/
 #gotham-city {
   height: auto;
   background: url(../img/wallpaper/bg-gotham.jpg);
@@ -1313,6 +1473,39 @@ html {
     width: 100%;
   }
 
+  /*CHAT TABLET*/
+ #chat-container {
+    width: 90%;
+    height: 400px;
+    bottom: 10px;
+    right: 5%;
+  }
+
+  #chat-messages {
+    padding: 10px;
+  }
+
+  .chat-message {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  #chat-input-container {
+    padding: 8px;
+  }
+
+  #chat-input {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  #chat-send-button {
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+
+  /*GOTHAM TABLET*/
+
   .gotham-text,
   .gotham-image {
     width: 100%;
@@ -1591,6 +1784,40 @@ html {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+  }
+
+  /*CHAT MOBILE*/
+  #chat-container {
+    width: 95%;
+    height: 350px;
+    bottom: 10px;
+    right: 2.5%;
+    border-radius: 12px;
+  }
+
+  #chat-header {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .chat-message {
+    font-size: 12px;
+    max-width: 80%;
+  }
+
+  #chat-input-container {
+    padding: 6px 10px;
+    gap: 5px;
+  }
+
+  #chat-input {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  #chat-send-button {
+    padding: 6px 12px;
+    font-size: 12px;
   }
 
 
