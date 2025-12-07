@@ -4,16 +4,16 @@ function toggleMenu() {
 }
 
 //MESSAGES CHAT MENU
-const CHAT_ICON = document.getElementById("chat-icon");
+const FLOAT_ING_BTN = document.getElementById("floating-btn");
 const CHAT_CONTAINER = document.getElementById("chat-container");
-const CLOSE_CHAT = document.querySelector(".close-chat");
 
-CHAT_ICON.addEventListener("click", () => {
-  CHAT_CONTAINER.style.display = "flex";
-  CHAT_ICON.style.display = "none"; // ocultar el icono
+// Abrir/cerrar ventana al hacer clic
+FLOAT_ING_BTN.addEventListener("click", () => {
+  if (CHAT_CONTAINER.style.display === "none" || CHAT_CONTAINER.style.display === "") {
+    CHAT_CONTAINER.style.display = "flex";   
+  } else {
+    CHAT_CONTAINER.style.display = "none";   
+  }
 });
 
-CLOSE_CHAT.addEventListener("click", () => {
-  CHAT_CONTAINER.style.display = "none";
-  CHAT_ICON.style.display = "flex"; // volver a mostrar el icono
-});
+

@@ -464,7 +464,8 @@ html {
 /*-------------------------------------------------------------*/
 
 /*CHAT FIREBASE*/
-#chat-icon {
+#floating-btn {
+  display: block;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -482,7 +483,8 @@ html {
   z-index: 10001;
   transition: transform 0.2s ease, background-color 0.3s ease;
 }
-#chat-icon:hover {
+
+#cfloating-btn:hover {
   transform: scale(1.1);
   background-color: var(--accent-red-dark);
 }
@@ -499,7 +501,6 @@ html {
   background-color: var(--dark-gray);
   border: 2px solid var(--accent-red);
   border-radius: 15px;
-  display: flex;
   flex-direction: column;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(178, 34, 34, 0.5);
