@@ -1,7 +1,6 @@
-// Importar funciones necesarias de Firebase modular
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
         import { getDatabase, ref, push, onChildAdded } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
-        // Configuración de Firebase
+        // CONFIGURETION FIREBASE
         const firebaseConfig = {
             apiKey: "AIzaSyA3kAu8CstilbjvC94gj29Gyb-FWdEElFk",
             authDomain: "gotham-city-webpage-proyecto.firebaseapp.com",
@@ -13,7 +12,7 @@
             measurementId: "G-443VQ84RK8"
         };
 
-        // Inicializar Firebase y la base de datos
+        // INITATION FIREBASE AND DATABASE
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app, "https://gotham-city-webpage-proyecto-default-rtdb.europe-west1.firebasedatabase.app");
         const messagesRef = ref(db, "messages");

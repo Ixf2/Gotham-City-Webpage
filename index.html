@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Referencia para hacer el contenido de la página https://dribbble.com/shots/24297211-Bento-Cards-v2-AI-->
+<!-- Reference for the all page https://dribbble.com/shots/24297211-Bento-Cards-v2-AI-->
 <!-- Reference for creating the page content: https://www.marvel.com/characters -->
 <!-- Reference for creating the page content: https://dribbble.com/shots/24297211-Bento-Cards-v2-AI- -->
 <!-- Reference content: https://dc.fandom.com/wiki/Category:Waylon_Jones_(Absolute_Universe)/Appearances?from=V -->
@@ -126,29 +126,27 @@
     </button>
 
     <div id="chat-container">
-  <div id="chat-box-start">
-
-  </div>
-  <!--Insert the nickname-->
-  <div id="login-screen">
-    <h2>Welcome to Chat Box</h2>
-    <p>Insert your nickname</p>
-    <input type="text" id="name-input" placeholder="You Nickname..." maxlength="20">
-    <button onclick="enterChat()">Enter the chat</button>
-    <div id="login-error" class="error"></div>
-  </div>
-  <!-- chat-screen se mueve al final del contenedor -->
-    <div id="chat-screen">
-      <h2>Chat Box</h2>
-      <div class="messages-container" id="messages-container">
-        <!-- Los mensajes aparecerán aquí -->
+      <div id="chat-box-start">
       </div>
-      <div class="input-container">
-        <input type="text" id="message-input" placeholder="Write the message" maxlength="500">
-        <button onclick="sendMessage()">Send</button>
+      <!--Insert the nickname-->
+      <div id="login-screen">
+        <h2>Welcome to Chat Box</h2>
+        <p>Insert your nickname</p>
+        <input type="text" id="name-input" placeholder="You Nickname..." maxlength="20">
+        <button onclick="enterChat()">Enter the chat</button>
+        <div id="login-error" class="error"></div>
+      </div>
+      <div id="chat-screen">
+        <h2>Chat Box</h2>
+        <div class="messages-container" id="messages-container">
+        </div>
+        <!-- MESSAGE HERE -->
+        <div class="input-container">
+          <input type="text" id="message-input" placeholder="Write the message" maxlength="500">
+          <button onclick="sendMessage()">Send</button>
+        </div>
       </div>
     </div>
-  </div>
 
 
 
