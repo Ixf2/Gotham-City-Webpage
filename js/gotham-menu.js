@@ -7,7 +7,7 @@ function toggleMenu() {
 const FLOAT_ING_BTN = document.getElementById("floating-btn");
 const CHAT_CONTAINER = document.getElementById("chat-container");
 
-// Abrir/cerrar ventana al hacer clic
+// OPEN/ CLOSE THE WINDOWS
 FLOAT_ING_BTN.addEventListener("click", () => {
   if (CHAT_CONTAINER.style.display === "none" || CHAT_CONTAINER.style.display === "") {
     CHAT_CONTAINER.style.display = "flex";   

@@ -126,16 +126,31 @@
     </button>
 
     <div id="chat-container">
-      <div id="chat-box">
-        <i class="fa-solid fa-comment-dots"></i>
-      </div>
+  <div id="chat-box-start">
 
-      <div id="chat-box">
-        <div id="chat-messages"></div>
-        <input type="text" id="chat-input" placeholder="Escribe tu mensaje..." />
-        <button id="chat-send">Enviar</button>
+  </div>
+  <!--Insert the nickname-->
+  <div id="login-screen">
+    <h2>Welcome to Chat Box</h2>
+    <p>Insert your nickname</p>
+    <input type="text" id="name-input" placeholder="You Nickname..." maxlength="20">
+    <button onclick="enterChat()">Enter the chat</button>
+    <div id="login-error" class="error"></div>
+  </div>
+  <!-- chat-screen se mueve al final del contenedor -->
+    <div id="chat-screen">
+      <h2>Chat Box</h2>
+      <div class="messages-container" id="messages-container">
+        <!-- Los mensajes aparecerán aquí -->
+      </div>
+      <div class="input-container">
+        <input type="text" id="message-input" placeholder="Write the message" maxlength="500">
+        <button onclick="sendMessage()">Send</button>
       </div>
     </div>
+  </div>
+
+
 
     <!--   BLOCK GOTHAM CITY    -->
     <div id="container-main">
@@ -641,7 +656,11 @@
   <script src="../js/gotham-windows-modal.js"></script>
   <script src="../js/scroll-animated.js"></script>
   <script src="../js/cards-animation.js"></script>
-  <script src="../js/firebase-setup.js"></script>
+  <!-- Obviously the variable modular is thanks a Chris <3 -->
+  <script type="module" src="../js/message-firebase.js"></script>
+  <!-- <script type="module" src="../js/firebase-setup.js"></script> -->
+  <!-- <script src="../js/firebase-setup.js"></script> -->
+
 </body>
 
 </html>
