@@ -24,21 +24,38 @@ The project is built using fundamental web technologies:
 * **Font Awesome:** Iconography for the menu, login, and social media links.
 
 ## 📁 Project Structure
-
-│
-├── 📄 index.html  
-├── 📁 css  
-│   └── styles.css  
-├── 📁 js  
-│   ├── gotham-menu.js  
-│   └── gotham-form.js  
-├── 📁 img  
-│   ├── villain/  
-│   ├── heroes/  
-│   ├── comics/  
-│   └── wallpaper/  
-└── 📁 video  
-    └── experiment-video-bg.mp4
+```bash
+.
+├── css/
+│ └── styles.css
+├── img/
+│ ├── comics/
+│ ├── heroes/
+│ ├── icons/
+│ ├── parallax/
+│ ├── reference/
+│ ├── villain/
+│ └── wallpaper/
+├── js/
+│ ├── cards-animation.js
+│ ├── firebase-setup.js
+│ ├── gotham-form.js
+│ ├── gotham-menu.js
+│ ├── gotham-parallax.js
+│ ├── gotham-windows-modal.js
+│ ├── log-in-sign-up.js
+│ ├── message-firebase.js
+│ ├── scroll-animated.js
+│ └── search-header.js
+├── node_modules/
+├── video/
+│ └── experiment-video-bg.mp4
+├── index.html
+├── LICENSE
+├── package-lock.json
+├── package.json
+└── README.md
+```
 
 ## 🚀 Installation and Usage
 
